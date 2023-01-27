@@ -5,14 +5,15 @@ export default ({ command }) => ({
   base: command === "serve" ? "" : "/dist/",
   build: {
     manifest: true,
-    outDir: "../cms/web/dist/",
+    outDir: "./dist/",
     rollupOptions: {
       input: {
-        app: "./src/js/app.ts",
+        app: "./src/main.ts",
       },
     },
   },
   server: {
+    host: "0.0.0.0",
     fs: {
       strict: false,
     },
@@ -23,7 +24,7 @@ export default ({ command }) => ({
   plugins: [
     vue(),
     ViteRestart({
-      reload: ["../cms/templates/**/*"],
+      reload: ["./templates/**/*"],
     }),
   ],
 });
