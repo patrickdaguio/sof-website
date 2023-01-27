@@ -1,0 +1,27 @@
+dateModified: 1674807597
+email:
+  fromEmail: coderpatdaguio@gmail.com
+  fromName: SOF
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
+    92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
+    fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: SOF
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

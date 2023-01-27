@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: SOF
+primary: true
+siteGroup: 1ca20a40-14e4-464a-accd-ef6bbb5c045b # SOF
+sortOrder: 1
