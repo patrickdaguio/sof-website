@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^4.3.5",
+    "craftcms/cms": "4.3.8.1",
     "nystudio107/craft-vite": "^4.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
@@ -19,10 +19,7 @@
       "yiisoft/yii2-composer": true
     },
     "sort-packages": true,
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "8.0.2"
-    }
+    "optimize-autoloader": true
   },
   "scripts": {
     "post-root-package-install": [

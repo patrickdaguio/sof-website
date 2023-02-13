@@ -3,16 +3,14 @@
 use craft\helpers\App;
 
 return [
-    'useDevServer' => App::env('CRAFT_ENVIRONMENT') === 'dev',
-    'manifestPath' => '@webroot/dist/manifest.json',
+    'checkDevServer' => true,
+    'devServerInternal' => 'http://localhost:3000',
     'devServerPublic' => App::env('PRIMARY_SITE_URL') . ':3000',
     'serverPublic' => App::env('PRIMARY_SITE_URL') . '/dist/',
+    'useDevServer' => App::env('CRAFT_ENVIRONMENT') === 'dev',
+    'manifestPath' => '@webroot/dist/manifest.json',
     'errorEntry' => 'src/main.ts',
     'cacheKeySuffix' => '',
-    'devServerInternal' => 'http://localhost:3000',
-    'checkDevServer' => true,
     'includeReactRefreshShim' => false,
     'includeModulePreloadShim' => true,
-    'criticalPath' => '@webroot/dist/criticalcss',
-    'criticalSuffix' =>'_critical.min.css',
 ];

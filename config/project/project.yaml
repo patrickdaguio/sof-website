@@ -1,4 +1,4 @@
-dateModified: 1674807597
+dateModified: 1675968535
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -6,6 +6,7 @@ email:
 meta:
   __names__:
     1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
+    2d3d5df6-74d7-49e0-a9b1-c62dc254e858: 'Public Schema' # Public Schema
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
 plugins:
