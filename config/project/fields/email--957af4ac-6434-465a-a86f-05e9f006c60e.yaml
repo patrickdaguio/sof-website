@@ -1,0 +1,12 @@
+columnSuffix: lhtgcdfk
+contentColumnType: string
+fieldGroup: c38c487d-bc57-4c3c-ab08-8a52e7848fb8 # Globals
+handle: email
+instructions: null
+name: Email
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

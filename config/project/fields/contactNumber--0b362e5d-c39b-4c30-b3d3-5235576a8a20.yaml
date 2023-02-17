@@ -1,0 +1,19 @@
+columnSuffix: lbzvikzw
+contentColumnType: text
+fieldGroup: c38c487d-bc57-4c3c-ab08-8a52e7848fb8 # Globals
+handle: contactNumber
+instructions: null
+name: 'Contact Number'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

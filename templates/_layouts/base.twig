@@ -1,17 +1,15 @@
 {% extends "_layouts/root" %}
 
-{% block header %}
-	{% include "_includes/header" %}
-{% endblock %}
-
 {% block body %}
-	{% block container %}
-		<div class="container px-6">
-			{% block main %}{% endblock %}
-		</div>
+	{% block header %}
+		{% include "_includes/header" %}
 	{% endblock %}
-{% endblock %}
 
-{% block footer %}
-	{% include "_includes/footer" %}
+	<main>
+		{% block main %}{% endblock %}
+	</main>
+
+	{% block footer %}
+		{% include "_includes/footer" %}
+	{% endblock %}
 {% endblock %}

@@ -6,10 +6,18 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: "2rem",
     },
     extend: {
       fontFamily: {
         sans: ["Avenir", ...defaultTheme.fontFamily.sans],
+      },
+      zIndex: {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
       },
     },
   },

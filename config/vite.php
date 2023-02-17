@@ -9,7 +9,7 @@ return [
     'serverPublic' => App::env('PRIMARY_SITE_URL') . '/dist/',
     'useDevServer' => App::env('CRAFT_ENVIRONMENT') === 'dev',
     'manifestPath' => '@webroot/dist/manifest.json',
-    'errorEntry' => 'src/main.ts',
+    'errorEntry' => 'src/js/main.ts',
     'cacheKeySuffix' => '',
     'includeReactRefreshShim' => false,
     'includeModulePreloadShim' => true,

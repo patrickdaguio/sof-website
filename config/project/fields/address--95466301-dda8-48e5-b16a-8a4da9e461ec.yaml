@@ -1,0 +1,19 @@
+columnSuffix: bovsxfqt
+contentColumnType: text
+fieldGroup: c38c487d-bc57-4c3c-ab08-8a52e7848fb8 # Globals
+handle: address
+instructions: null
+name: Address
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

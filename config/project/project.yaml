@@ -1,13 +1,34 @@
-dateModified: 1675968535
+dateModified: 1676584418
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  public:
+    hasUrls: true
+    name: Public
+    settings:
+      path: '@webroot/images/public'
+    type: craft\fs\Local
+    url: '@web/images/public'
 meta:
   __names__:
+    0b362e5d-c39b-4c30-b3d3-5235576a8a20: 'Contact Number' # Contact Number
     1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
     2d3d5df6-74d7-49e0-a9b1-c62dc254e858: 'Public Schema' # Public Schema
+    5def0e7b-ecaf-4850-9768-997d8e99c413: Public # Public
+    5e32fc60-4d04-454b-a4c2-0c3748406520: Contact # Contact
+    37e508d3-e65e-473f-9835-f157fde7f284: Homepage # Homepage
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
+    957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
+    2816a112-88bc-41d8-a9cf-ddb13c62c52a: Hero # Hero
+    95466301-dda8-48e5-b16a-8a4da9e461ec: Address # Address
+    a57f88c4-6b1f-447b-afc9-c5f56310b915: Heading # Heading
+    b3e112c6-aa4e-434a-957a-3ffd12bda688: Homepage # Homepage
+    bb45d14f-3863-4f58-9763-ef62548e58fd: Image # Image
+    c38c487d-bc57-4c3c-ab08-8a52e7848fb8: Globals # Globals
+    ee00a92d-d445-49c8-aef2-777434617a63: Subheading # Subheading
+    f89060f4-b7cc-4378-82bc-72270a7beb7f: Hero # Hero
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
 plugins:
   vite:

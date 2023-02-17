@@ -1,0 +1,49 @@
+<footer class="w-full bg-neutral-900 text-white py-8">
+  <div class="container">
+    <div class="grid grid-cols-2">
+    {# Pages #}
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" class="uppercase text-left font-light">About</th>
+            <th scope="col" class="uppercase text-left font-light">Connect</th>
+            <th scope="col" class="uppercase text-left font-light">Resources</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-bold"><a href="/">Lead Pastors</a></td>
+            <td><a href="/">Beliefs</a></td>
+            <td><a href="/">Ministries</a></td>
+          </tr>
+          <tr>
+            <td><a href="/">Cell Groups</a></td>
+            <td><a href="/">Plan a visit</a></td>
+            <td><a href="/">Testimonies</a></td>
+          </tr>
+          <tr>
+            <td><a href="/">Prayer Request</a></td>
+            <td><a href="/">Give</a></td>
+            <td><a href="/">Here to serve</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      {# Information #}
+      <div>
+        <address>{{contact.address|nl2br}}</address>
+        <a class="block" href="tel:{{contact.contactNumber|replace(' ', '')}}">{{contact.contactNumber}}</a>
+        <a class="block" href="mailto:{{contact.email}}">{{contact.email}}</a>
+      </div>
+
+      {# Socials #}
+      <div>
+        <h5>Socials</h5>
+        <div class="text-white">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

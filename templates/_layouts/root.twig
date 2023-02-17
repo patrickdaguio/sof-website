@@ -2,23 +2,21 @@
 <html lang="en-US">
 <head>
     {% block headStart %}{% endblock %}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="utf-8"/>
     <title>SOF | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="referrer" content="origin-when-cross-origin"/> 
     {% block headEnd %}{% endblock %}
 </head>
 <body>
     {% block bodyStart %}{% endblock %}
 
-    <div id="app">
-        {% block header %}{% endblock %}
+    <div id="app"> 
         {% block body %}{% endblock %}
-        {% block footer %}{% endblock %}
     </div>
-    {{ craft.vite.script("/src/js/main.ts") }}
 
+    {{ craft.vite.script("/src/js/main.ts") }}
     {% block bodyEnd %}{% endblock %}
 </body>
 </html>
