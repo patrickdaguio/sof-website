@@ -1,5 +1,5 @@
-
 {% set heroBlock = entry.hero.one() %}
+
 <section class="relative">
 {# Hero Image #}
 {% set heroImage = heroBlock.image.one() ?? null %}
@@ -18,10 +18,10 @@
   </div>
 
 {# Hero Overlay #}
-  <div class="absolute top-0 left-0 w-full h-full z-1 bg-stone-800/50"></div>
+  <div class="absolute top-0 left-0 w-full h-full bg-stone-800/50"></div>
 
 {# Hero Headings #}
-  <div class="container z-2 pt-32 pb-40">
+  <div class="max-w-7xl mx-auto pt-32 pb-40">
     <div class="z-10 relative max-w-6xl">
       <h1 class="text-white text-[156px] leading-none font-bold mb-4">{{heroBlock.heading}}</h1>
       <h2 class="text-white text-3xl tracking-widest uppercase font-bold">{{heroBlock.subheading}}</h2>
@@ -29,7 +29,7 @@
   <div>
 
   {# Visit Us #}
-  <div class="py-0.5 px-1 bg-white absolute right-8 bottom-8 z-4 rounded-sm">
+  <div class="py-0.5 px-1 bg-white absolute right-8 bottom-8 rounded-sm">
     <span class="block font-extrabold text-2xl">VISIT</span>
     <span class="block font-extrabold text-4xl -mt-2.5">US</span>
   </div>

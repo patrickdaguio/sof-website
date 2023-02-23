@@ -1,14 +1,14 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 164a36d3-9f46-4b35-a479-5be5a853423a # Sections
-handle: hero
+fieldGroup: fe4865ba-4f7c-4d0b-b40d-d9f765030adc # Common
+handle: cardAndContent
 instructions: null
-name: Hero
+name: 'Card and Content'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_hero}}'
-  maxBlocks: 1
-  minBlocks: 1
+  contentTable: '{{%matrixcontent_cardandcontent}}'
+  maxBlocks: null
+  minBlocks: null
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

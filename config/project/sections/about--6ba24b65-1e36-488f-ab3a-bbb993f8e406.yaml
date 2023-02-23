@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: about
+name: About
+propagationMethod: all
+siteSettings:
+  92c2ec1a-379c-4edf-83c4-d3a564b9010a: # SOF
+    enabledByDefault: true
+    hasUrls: true
+    template: about
+    uriFormat: about
+type: single

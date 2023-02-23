@@ -42,6 +42,42 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 24b0ac47-958f-4081-b72a-6bb9de1335af # Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5dd96b63-913c-49c4-a611-623474ee8ab1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f17920de-fd30-4278-80c9-758a45945864 # Image and Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30316254-6e7d-49a6-ad84-59e2f59735b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7b78f56b-ac40-4c34-8d37-2645c7db3424 # Card and Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed068727-dcd3-461a-9d66-6881c11f3e77
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 113b9a7f-085b-4d0f-ab6d-df9dfb3ff987
         userCondition: null

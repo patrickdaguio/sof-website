@@ -1,0 +1,43 @@
+fieldLayouts:
+  95863f18-8768-46ad-93ce-679681bfe6d9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5260846c-a207-4bb5-9549-08038d404b1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ca12cc10-d547-46ed-b942-b06274423157
+        userCondition: null
+handle: planAVisit
+hasTitleField: false
+name: 'Plan a Visit'
+section: 24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3 # Plan a Visit
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

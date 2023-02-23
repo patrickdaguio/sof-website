@@ -1,6 +1,90 @@
+{# Homepage #}
 {% extends "_layouts/base" %}
+
+{% set imageAndContentBlock = entry.imageAndContent.one() %}
+{% set cardAndContentBlock = entry.cardAndContent.one() %}
 
 {% block main %}
 	{# Hero Section #}
 	{% include "_components/hero" %}
+
+	{# Filler #}
+	<div class="h-96 bg-white flex justify-center items-center text-4xl font-bold">
+		<p class="border-2 border-gray-900 p-36">Hype Video</p>
+	</div>
+
+	{# Image w/ Content and Background #}
+	<section class="relative">
+		{% set bgImage = entry.backgroundImage.one() ?? null %}
+
+		<div class="absolute w-full h-full top-0 z-0">
+			{% if bgImage %}
+			<picture>
+				{% if craft.app.images.supportsWebP %}
+					<source type="image/webp" srcset="{{ bgImage.url({ width: 2000, format: 'webp' }) }} 2000w">
+				{% endif %}
+				<img src="{{ bgImage.url({ width: 2000, height: 500 }) }}" 
+					alt="{{ bgImage.title }}" class="block object-cover w-full h-full">
+			</picture>
+			{% else %}
+				<img src="{{ bgImage.url }}" alt="{{ bgImage.title }}" class="">
+			{% endif %}
+		</div>
+
+	{# Image with content #}
+		<div class="max-w-7xl mx-auto relative text-white py-32">
+			<p class="uppercase text-2xl font-bold tracking-wide mb-8">Here at Shield of Faith >>></p>
+			<div class="flex items-center justify-center">
+				<div class="z-2">
+					<div class="max-w-md">
+						<h2 class="capitalize text-[156px] font-black mb-16 leading-none">{{imageAndContentBlock.heading}}</h2>
+						<a class="bg-transparent border border-white pt-1 pb-2 px-10 text-2xl text-center rounded-lg font-bold transition-all hover:shadow-md hover:shadow-gray-500" href="{{imageAndContentBlock.contentEntry.one().url}}">Plan a visit</a>
+					</div>
+				</div>
+				{% set contentImage = imageAndContentBlock.image.one() ?? null %}
+				<div class="overflow-hidden w-full h-full">
+					{% if contentImage %}
+					<picture>
+						{% if craft.app.images.supportsWebP %}
+							<source type="image/webp" srcset="{{ contentImage.url({ width: 2000, format: 'webp' }) }} 2000w">
+						{% endif %}
+						<img src="{{ contentImage.url({ width: 2000, height: 500 }) }}"
+							srcset="{{ contentImage.url({ width: 2000}) }} 2000w" 
+							alt="{{ contentImage.title }}" class="block object-cover h-full w-full rounded-2xl">
+					</picture>
+					{% else %}
+						<img src="{{ contentImage.url }}" alt="{{ contentImage.title }}" class="border border-red-500 p-2">
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	{# Pastors #}
+	<section class="py-28">
+		<div class="max-w-7xl mx-auto relative">
+			<div class="flex w-full gap-12">
+				{% set cardImage = cardAndContentBlock.image.one() ?? null %}
+				<div class="bg-gray-200 shadow-gray-400 p-6 pb-16 shadow-md border-r border-gray-400/70 overflow-hidden rounded-sm">
+					{% if cardImage %}
+					<picture>
+						{% if craft.app.images.supportsWebP %}
+							<source type="image/webp" srcset="{{ cardImage.url({ width: 640, format: 'webp' }) }} 640w">
+						{% endif %}
+						<img src="{{ cardImage.url({ width: 640, height: 640 }) }}" 
+							srcset="{{ cardImage.url({ width: 640 }) }} 640w"
+							alt="{{ cardImage.title }}" class="block object-cover h-full w-full max-h-[40rem]">
+					</picture>
+					{% else %}
+						<img src="{{ cardImage.url }}" alt="{{ cardImage.title }}" class="border border-red-500 p-2">
+					{% endif %}
+				</div>
+				<div class="py-4 px-8 text-zinc-900">
+					<h3 class="text-3xl font-medium uppercase">{{cardAndContentBlock.subheading}}</h3>
+					<h2 class="text-9xl font-bold uppercase mt-2 mb-8">{{cardAndContentBlock.heading}}</h2>
+					<p class="text-xl">{{cardAndContentBlock.text}}</p>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

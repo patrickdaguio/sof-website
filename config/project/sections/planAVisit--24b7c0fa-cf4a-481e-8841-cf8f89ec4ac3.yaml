@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: planAVisit
+name: 'Plan a Visit'
+propagationMethod: all
+siteSettings:
+  92c2ec1a-379c-4edf-83c4-d3a564b9010a: # SOF
+    enabledByDefault: true
+    hasUrls: true
+    template: plan-a-visit
+    uriFormat: plan-a-visit
+type: single

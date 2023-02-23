@@ -1,13 +1,16 @@
 @layer components {
   .navbar {
     ul {
-      @apply flex gap-8 font-bold;
+      @apply flex gap-8 font-bold text-zinc-900;
     }
     li {
       @apply uppercase text-lg;
     }
     a {
-      @apply hover:text-gray-700 focus:text-gray-700;
+      @apply hover:text-zinc-800 focus:text-zinc-800 relative hover:before:w-full;
+      &:before {
+        @apply content-[''] left-0 w-0 h-[3px] transition-all -bottom-1 bg-zinc-900 right-auto absolute;
+      }
     }
   }
 }
