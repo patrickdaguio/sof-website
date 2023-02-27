@@ -1,4 +1,4 @@
-dateModified: 1677179077
+dateModified: 1677486310
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -15,6 +15,8 @@ meta:
   __names__:
     0b362e5d-c39b-4c30-b3d3-5235576a8a20: 'Contact Number' # Contact Number
     1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
+    1fdce953-f995-4972-872d-727df763d639: Heading # Heading
+    2a5a59a1-1925-46a0-b83f-99fe76ae603b: 'Text Content' # Text Content
     2d3d5df6-74d7-49e0-a9b1-c62dc254e858: 'Public Schema' # Public Schema
     2eba0e76-81ca-4c4d-9e49-a96518ede5b7: Subheading # Subheading
     4dbfdfc3-168c-49f9-91e2-c8e19f7dcecb: Heading # Heading
@@ -33,6 +35,7 @@ meta:
     843ee478-160a-4e57-833b-3a0c12f04897: 'Plan a Visit' # Plan a Visit
     957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
     2816a112-88bc-41d8-a9cf-ddb13c62c52a: Hero # Hero
+    4706fd84-7418-404a-98cc-edd315aafe63: Link # Link
     7166a4a2-0e75-4310-8ace-d1fe19425287: Text # Text
     95466301-dda8-48e5-b16a-8a4da9e461ec: Address # Address
     a57f88c4-6b1f-447b-afc9-c5f56310b915: Heading # Heading
@@ -51,6 +54,10 @@ meta:
     f89060f4-b7cc-4378-82bc-72270a7beb7f: Hero # Hero
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
 plugins:
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   vite:
     edition: standard
     enabled: true

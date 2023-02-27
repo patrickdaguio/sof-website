@@ -1,3 +1,20 @@
 {% extends "_layouts/base" %}
 
-about us
+{% block main %}
+	<section class="relative">
+		<div
+			class="max-w-7xl mx-auto">
+			{# <div class="pt-32 pb-40"> #}
+			<div class=" h-[calc(100vh-11vh)] flex flex-col justify-center">
+				<div class="-mt-24">
+					<h1 class="font-extrabold text-9xl">{{entry.heading}}</h1>
+					<p class="mt-8 mb-10 max-w-6xl text-xl">{{entry.textContent|nl2br}}</p>
+					<a class="border-2 border-neutral-900 w-52 text-center pt-1 pb-1.5 uppercase font-bold rounded-lg block" href="{{entry.linkField}}">{{entry.linkField.customText}}</a>
+				</div>
+			</div>
+		</div>
+
+		{# Visit Us #}
+		{% include "_components/visit-us" with { 'blueBg': true } only %}
+	</section>
+{% endblock %}

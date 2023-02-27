@@ -1,50 +1,70 @@
 <footer class="w-full bg-neutral-900 text-white py-10">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-[max-content,1fr,1fr] gap-12">
-    {# Pages #}
-      <div class="grid grid-cols-3 gap-11">
-        <div>
-          <a class="uppercase text-left font-light mb-1.5" href="/">About</a>
-          <ul class="space-y-1">
-            <li class="font-semibold"><a href="/">Lead Pastors</a></li>
-            <li class="font-semibold"><a href="/">Beliefs</a></li>
-            <li class="font-semibold"><a href="/">Ministries</a></li>
-          </ul>
-        </div>
-        <div>
-          <a class="uppercase text-left font-light mb-1.5" href="/">Connect</a>
-          <ul class="space-y-1">
-            <li class="font-semibold"><a href="/">Cell Groups</a></li>
-            <li class="font-semibold"><a href="/">Plan a visit</a></li>
-            <li class="font-semibold"><a href="/">Testimonies</a></li>
-          </ul>
-        </div>
-        <div>
-          <a class="uppercase text-left font-light mb-1.5" href="/">Resources</a>
-          <ul class="space-y-1">
-            <li class="font-semibold"><a href="/">Prayer Requests</a></li>
-            <li class="font-semibold"><a href="/">Give</a></li>
-            <li class="font-semibold"><a href="/">Here to serve</a></li>
-          </ul>
-        </div>
-      </div>
+	<div class="max-w-7xl mx-auto">
+		<div
+			class="grid grid-cols-[max-content,1fr,1fr] gap-12">
+			{# Pages #}
+			<div class="grid grid-cols-3 gap-11">
+				<div>
+					<a class="uppercase text-left font-light mb-1.5" href="/">About</a>
+					<ul class="space-y-1">
+						<li class="font-semibold">
+							<a href="/">Lead Pastors</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Beliefs</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Ministries</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<a class="uppercase text-left font-light mb-1.5" href="/">Connect</a>
+					<ul class="space-y-1">
+						<li class="font-semibold">
+							<a href="/">Cell Groups</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Plan a visit</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Testimonies</a>
+						</li>
+					</ul>
 
-      {# Information #}
-      <div class="space-y-1.5 justify-self-end">
-        <address class="not-italic leading-7">{{contact.address|nl2br}}</address>
-        <a class="inline-block" href="mailto:{{contact.email}}">{{contact.email}}</a>
-        <a class="block" href="tel:{{contact.contactNumber|replace(' ', '')}}">{{contact.contactNumber}}</a>
-      </div>
+				</div>
+				<div>
+					<a class="uppercase text-left font-light mb-1.5" href="/">Resources</a>
+					<ul class="space-y-1">
+						<li class="font-semibold">
+							<a href="/">Prayer Requests</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Give</a>
+						</li>
+						<li class="font-semibold">
+							<a href="/">Here to serve</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-      {# Socials #}
-      <div class="justify-self-center">
-        <h5 class="uppercase font-medium">Socials</h5>
-        <div class="text-white">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-solid fa-basket-shopping"></i>
-        </div>
-      </div>
-    </div>
-    <h5 class="mt-10">&copy; 2023 Made with love, by Shield of Faith Media &hearts;</h5>
-  </div>
+			{# Information #}
+			<div class="space-y-1.5 justify-self-end">
+				<address class="not-italic leading-7">{{contact.address|nl2br}}</address>
+				<a class="inline-block" href="mailto:{{contact.email}}">{{contact.email}}</a>
+				<a class="block" href="tel:{{contact.contactNumber|replace(' ', '')}}">{{contact.contactNumber}}</a>
+			</div>
+
+			{# Socials #}
+			<div class="justify-self-center">
+				<h5 class="uppercase font-medium">Socials</h5>
+				<div class="text-white">
+					<i class="fa-brands fa-facebook"></i>
+					<i class="fa-solid fa-basket-shopping"></i>
+				</div>
+			</div>
+		</div>
+		<h5 class="mt-10">&copy; 2023 Made with love, by Shield of Faith Media &hearts;</h5>
+	</div>
 </footer>
