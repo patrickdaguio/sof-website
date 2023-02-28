@@ -1,4 +1,4 @@
-dateModified: 1677486310
+dateModified: 1677614654
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -26,12 +26,16 @@ meta:
     6ba24b65-1e36-488f-ab3a-bbb993f8e406: About # About
     6e3d698e-fc64-426a-98bd-b65a1e6002fa: Heading # Heading
     7b78f56b-ac40-4c34-8d37-2645c7db3424: 'Card and Content' # Card and Content
+    8d57703e-7d08-4887-b294-1fd3701e52ec: Statement # Statement
     24b0ac47-958f-4081-b72a-6bb9de1335af: 'Background Image' # Background Image
     24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3: 'Plan a Visit' # Plan a Visit
     37e508d3-e65e-473f-9835-f157fde7f284: Homepage # Homepage
     74fcbf63-5acc-4434-9703-bcb1ee3bb3be: Image # Image
+    88cf421d-710b-4816-8514-04106eedaf65: Text # Text
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
     164a36d3-9f46-4b35-a479-5be5a853423a: Sections # Sections
+    548a1d37-8055-49da-bbef-f889e2063e80: Image # Image
+    0841e1c3-f106-46a5-8b1d-614f501b455d: 'Heading And Text' # Heading And Text
     843ee478-160a-4e57-833b-3a0c12f04897: 'Plan a Visit' # Plan a Visit
     957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
     2816a112-88bc-41d8-a9cf-ddb13c62c52a: Hero # Hero
@@ -39,17 +43,22 @@ meta:
     7166a4a2-0e75-4310-8ace-d1fe19425287: Text # Text
     95466301-dda8-48e5-b16a-8a4da9e461ec: Address # Address
     a57f88c4-6b1f-447b-afc9-c5f56310b915: Heading # Heading
+    a69ad962-1e03-409e-b6fa-97b5d6a4dbfe: Card # Card
+    a865f728-4794-40d7-9fe2-db08674dea86: Card # Card
     b3e112c6-aa4e-434a-957a-3ffd12bda688: Homepage # Homepage
     b10bde8e-ec67-4fb3-a707-69d4f8b42de5: 'Card and Content' # Card and Content
     bb45d14f-3863-4f58-9763-ef62548e58fd: Image # Image
     c09eeb97-2c44-4f62-8dc1-16fc5a0e6545: Text # Text
     c9c5ab1d-8925-4945-a073-7f638ed73cd0: Image # Image
     c38c487d-bc57-4c3c-ab08-8a52e7848fb8: Globals # Globals
+    c52d8494-2514-437f-b221-482c169fd312: Heading # Heading
+    c7928b13-5e75-473f-aeb5-70e5471809ea: Heading # Heading
     d24ba13c-999f-40ef-9083-6f899ba03bc3: About # About
     e4f0fd3b-af8a-4ee6-a094-79183b2de4f6: 'Card Title' # Card Title
     ebc2a9d3-ec01-42dc-8574-fa1266a986c9: Media # Media
     ee00a92d-d445-49c8-aef2-777434617a63: Subheading # Subheading
     efb0bb5b-afde-4f80-978e-2a15ce4a90cf: 'Image And Content' # Image And Content
+    f76a43a7-a1a0-40f9-b82c-0803a9257b79: 'Heading And Text' # Heading And Text
     f17920de-fd30-4278-80c9-758a45945864: 'Image and Content' # Image and Content
     f89060f4-b7cc-4378-82bc-72270a7beb7f: Hero # Hero
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common

@@ -1,0 +1,78 @@
+field: f76a43a7-a1a0-40f9-b82c-0803a9257b79 # Heading And Text
+fieldLayouts:
+  a811a1a1-26f3-4775-aeb8-45c013682cf5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c52d8494-2514-437f-b221-482c169fd312 # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e12d1fb9-f3d3-4ee2-adfe-3aabfc66e528
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 88cf421d-710b-4816-8514-04106eedaf65 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 023a2747-7d06-4101-8f4f-6e1d11fb90f6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 64638540-7f81-4eef-bfa0-484bfacf8be4
+        userCondition: null
+fields:
+  88cf421d-710b-4816-8514-04106eedaf65: # Text
+    columnSuffix: gssjcrfw
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 2
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c52d8494-2514-437f-b221-482c169fd312: # Heading
+    columnSuffix: siqcgats
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: headingAndText
+name: 'Heading And Text'
+sortOrder: 1
