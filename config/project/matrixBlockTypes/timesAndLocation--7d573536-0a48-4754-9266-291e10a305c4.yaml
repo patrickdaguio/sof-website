@@ -1,0 +1,307 @@
+field: f1e03e5c-99ba-42bc-98a4-26808ccc4745 # Times and Locations
+fieldLayouts:
+  1719aca1-3803-4792-b074-694bffab5897:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b71ba86c-af02-473d-9860-ee966ee2aaaf # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10d15c87-f401-448a-8114-a14b77af4f1c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 16e9beaa-fe42-47e6-b8e8-e5a4c0d3e56b # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b5dcda1-c13b-459b-a9e7-d2bd01688caf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 81a3a0f5-76e9-40a9-8512-508fcbad04db # Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46a72d27-ca0e-4a89-b09b-606b052e9d00
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6e32fb88-4afe-4da2-ae2d-3203b6b7466a # Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: db7ba1d6-4132-4bcd-8cd3-8feffaa5b75d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 25a1f7ca-1ee1-4f44-8691-62b798d11783 # Times
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22d8f8dd-ca17-4ed5-bc0a-ea4a8ad37f97
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59309d74-c6f5-44fc-8631-9509c05ae8ea # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddfc951a-14fe-480e-adae-ae096f685722
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4d1da2f0-894a-4913-a422-8b9c89d72c2a
+        userCondition: null
+fields:
+  6e32fb88-4afe-4da2-ae2d-3203b6b7466a: # Address
+    columnSuffix: dwmahptm
+    contentColumnType: text
+    fieldGroup: null
+    handle: address
+    instructions: null
+    name: Address
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 2
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  16e9beaa-fe42-47e6-b8e8-e5a4c0d3e56b: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5def0e7b-ecaf-4850-9768-997d8e99c413' # Public
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5def0e7b-ecaf-4850-9768-997d8e99c413' # Public
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  25a1f7ca-1ee1-4f44-8691-62b798d11783: # Times
+    columnSuffix: npauyace
+    contentColumnType: text
+    fieldGroup: null
+    handle: times
+    instructions: null
+    name: Times
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Sundays
+                -
+                  - handle
+                  - sundays
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Fridays
+                -
+                  - handle
+                  - fridays
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults: null
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  81a3a0f5-76e9-40a9-8512-508fcbad04db: # Location
+    columnSuffix: gzrkekcr
+    contentColumnType: text
+    fieldGroup: null
+    handle: location
+    instructions: null
+    name: Location
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  59309d74-c6f5-44fc-8631-9509c05ae8ea: # Button
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: button
+    instructions: null
+    name: Button
+    searchable: true
+    settings:
+      allowCustomText: true
+      allowTarget: false
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: asset
+      defaultText: ''
+      enableAllLinkTypes: true
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  b71ba86c-af02-473d-9860-ee966ee2aaaf: # Heading
+    columnSuffix: oqenbgsr
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: timesAndLocation
+name: 'Times and Location'
+sortOrder: 1

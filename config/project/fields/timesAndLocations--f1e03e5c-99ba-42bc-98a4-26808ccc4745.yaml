@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 164a36d3-9f46-4b35-a479-5be5a853423a # Sections
+handle: timesAndLocations
+instructions: null
+name: 'Times and Locations'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_timesandlocations}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

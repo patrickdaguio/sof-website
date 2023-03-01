@@ -30,13 +30,37 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 1fdce953-f995-4972-872d-727df763d639 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3be3626-db3a-4322-832f-584a69984443
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f1e03e5c-99ba-42bc-98a4-26808ccc4745 # Times and Locations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a7bcd8a-4a70-4221-b29f-38a4739c34e8
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: ca12cc10-d547-46ed-b942-b06274423157
         userCondition: null
-handle: planAVisit
+handle: contact
 hasTitleField: false
-name: 'Plan a Visit'
-section: 24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3 # Plan a Visit
+name: Contact
+section: 24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3 # Contact
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
