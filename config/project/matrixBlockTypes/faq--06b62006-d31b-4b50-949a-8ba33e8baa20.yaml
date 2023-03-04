@@ -1,0 +1,86 @@
+field: e2084655-36e3-4221-84ec-99cb90eb395a # FAQ
+fieldLayouts:
+  dbf7a45f-d3bd-437f-8fcd-ef2a585e177a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6c9aecf5-bc73-4837-b9dc-b4dad48c0968 # Question
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23898c7d-1451-4db8-b953-af2bcf530412
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fa0dfa5-3571-4bf5-b27b-0b2649c175fe # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f6abacb-73d4-4e93-a32a-3c72bd732f48
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bcd8bc1e-10c2-433b-8616-3f41633a31cc
+        userCondition: null
+fields:
+  0fa0dfa5-3571-4bf5-b27b-0b2649c175fe: # Text
+    columnSuffix: isslrxqa
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  6c9aecf5-bc73-4837-b9dc-b4dad48c0968: # Question
+    columnSuffix: mxtpvcmz
+    contentColumnType: text
+    fieldGroup: null
+    handle: question
+    instructions: null
+    name: Question
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: faq
+name: FAQ
+sortOrder: 1

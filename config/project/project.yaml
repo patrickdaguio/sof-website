@@ -1,4 +1,4 @@
-dateModified: 1677653999
+dateModified: 1677948652
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -14,6 +14,7 @@ fs:
 meta:
   __names__:
     0b362e5d-c39b-4c30-b3d3-5235576a8a20: 'Contact Number' # Contact Number
+    0fa0dfa5-3571-4bf5-b27b-0b2649c175fe: Text # Text
     1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
     1fdce953-f995-4972-872d-727df763d639: Heading # Heading
     2a5a59a1-1925-46a0-b83f-99fe76ae603b: 'Text Content' # Text Content
@@ -23,7 +24,9 @@ meta:
     5dc0258b-ec67-4d28-a985-3d1e30612fa5: 'Content Entry' # Content Entry
     5def0e7b-ecaf-4850-9768-997d8e99c413: Public # Public
     5e32fc60-4d04-454b-a4c2-0c3748406520: Contact # Contact
+    06b62006-d31b-4b50-949a-8ba33e8baa20: FAQ # FAQ
     6ba24b65-1e36-488f-ab3a-bbb993f8e406: About # About
+    6c9aecf5-bc73-4837-b9dc-b4dad48c0968: Question # Question
     6e3d698e-fc64-426a-98bd-b65a1e6002fa: Heading # Heading
     6e32fb88-4afe-4da2-ae2d-3203b6b7466a: Address # Address
     7b78f56b-ac40-4c34-8d37-2645c7db3424: 'Card and Content' # Card and Content
@@ -40,6 +43,7 @@ meta:
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
     164a36d3-9f46-4b35-a479-5be5a853423a: Sections # Sections
     548a1d37-8055-49da-bbef-f889e2063e80: Image # Image
+    685c5545-2cb5-40df-88e2-8e42c2863b05: Subheading # Subheading
     0841e1c3-f106-46a5-8b1d-614f501b455d: 'Heading And Text' # Heading And Text
     843ee478-160a-4e57-833b-3a0c12f04897: Contact # Contact
     957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
@@ -62,6 +66,7 @@ meta:
     c7928b13-5e75-473f-aeb5-70e5471809ea: Heading # Heading
     d24ba13c-999f-40ef-9083-6f899ba03bc3: About # About
     e4f0fd3b-af8a-4ee6-a094-79183b2de4f6: 'Card Title' # Card Title
+    e2084655-36e3-4221-84ec-99cb90eb395a: FAQ # FAQ
     ebc2a9d3-ec01-42dc-8574-fa1266a986c9: Media # Media
     ee00a92d-d445-49c8-aef2-777434617a63: Subheading # Subheading
     efb0bb5b-afde-4f80-978e-2a15ce4a90cf: 'Image And Content' # Image And Content
@@ -71,6 +76,10 @@ meta:
     f89060f4-b7cc-4378-82bc-72270a7beb7f: Hero # Hero
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
 plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
   typedlinkfield:
     edition: standard
     enabled: true

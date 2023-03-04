@@ -167,10 +167,10 @@ fields:
               __assoc__:
                 -
                   - heading
-                  - Sundays
+                  - Day
                 -
                   - handle
-                  - sundays
+                  - day
                 -
                   - width
                   - ''
@@ -183,10 +183,10 @@ fields:
               __assoc__:
                 -
                   - heading
-                  - Fridays
+                  - 'Opening Hours'
                 -
                   - handle
-                  - fridays
+                  - openingHours
                 -
                   - width
                   - ''

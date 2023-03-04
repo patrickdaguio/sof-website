@@ -1,5 +1,5 @@
-import App from "@/js/components/App.vue";
+import Accordion from "@/js/components/Accordion.vue";
 
 export default {
-  App,
+  Accordion,
 };
