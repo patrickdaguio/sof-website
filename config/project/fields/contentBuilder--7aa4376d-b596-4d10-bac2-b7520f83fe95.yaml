@@ -1,12 +1,12 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: fe4865ba-4f7c-4d0b-b40d-d9f765030adc # Common
-handle: headingAndText
+handle: contentBuilder
 instructions: null
-name: 'Heading and Text'
+name: 'Content Builder'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_headingandtext}}'
+  contentTable: '{{%matrixcontent_contentbuilder}}'
   maxBlocks: null
   minBlocks: null
   propagationKeyFormat: null

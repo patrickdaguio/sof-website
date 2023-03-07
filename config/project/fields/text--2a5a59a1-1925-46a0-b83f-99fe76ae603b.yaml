@@ -1,9 +1,9 @@
 columnSuffix: nwmmdmxx
 contentColumnType: text
 fieldGroup: fe4865ba-4f7c-4d0b-b40d-d9f765030adc # Common
-handle: textContent
+handle: text
 instructions: null
-name: 'Text Content'
+name: 'Text '
 searchable: true
 settings:
   byteLimit: null

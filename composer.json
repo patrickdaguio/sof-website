@@ -4,6 +4,7 @@
     "craftcms/redactor": "3.0.3",
     "nystudio107/craft-vite": "^4.0",
     "sebastianlenz/linkfield": "2.1.5",
+    "spicyweb/craft-embedded-assets": "3.1.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

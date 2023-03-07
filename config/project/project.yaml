@@ -1,4 +1,4 @@
-dateModified: 1677948652
+dateModified: 1678222671
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -17,7 +17,7 @@ meta:
     0fa0dfa5-3571-4bf5-b27b-0b2649c175fe: Text # Text
     1ca20a40-14e4-464a-accd-ef6bbb5c045b: SOF # SOF
     1fdce953-f995-4972-872d-727df763d639: Heading # Heading
-    2a5a59a1-1925-46a0-b83f-99fe76ae603b: 'Text Content' # Text Content
+    2a5a59a1-1925-46a0-b83f-99fe76ae603b: 'Text ' # Text 
     2d3d5df6-74d7-49e0-a9b1-c62dc254e858: 'Public Schema' # Public Schema
     2eba0e76-81ca-4c4d-9e49-a96518ede5b7: Subheading # Subheading
     4dbfdfc3-168c-49f9-91e2-c8e19f7dcecb: Heading # Heading
@@ -29,27 +29,36 @@ meta:
     6c9aecf5-bc73-4837-b9dc-b4dad48c0968: Question # Question
     6e3d698e-fc64-426a-98bd-b65a1e6002fa: Heading # Heading
     6e32fb88-4afe-4da2-ae2d-3203b6b7466a: Address # Address
+    7aa4376d-b596-4d10-bac2-b7520f83fe95: 'Content Builder' # Content Builder
     7b78f56b-ac40-4c34-8d37-2645c7db3424: 'Card and Content' # Card and Content
     7d573536-0a48-4754-9266-291e10a305c4: 'Times and Location' # Times and Location
+    8a76b890-871f-4ddc-b698-6d29d4a8da3c: 'Video Content' # Video Content
     8d57703e-7d08-4887-b294-1fd3701e52ec: Statement # Statement
     16e9beaa-fe42-47e6-b8e8-e5a4c0d3e56b: Image # Image
     24b0ac47-958f-4081-b72a-6bb9de1335af: 'Background Image' # Background Image
     24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3: Contact # Contact
     25a1f7ca-1ee1-4f44-8691-62b798d11783: Times # Times
     37e508d3-e65e-473f-9835-f157fde7f284: Homepage # Homepage
+    47c5793a-e0d7-4c7c-acb1-d5d848723d46: 'Video and Content' # Video and Content
+    60a354da-c6c2-43a4-8ee3-50334d93b463: Video # Video
     74fcbf63-5acc-4434-9703-bcb1ee3bb3be: Image # Image
     81a3a0f5-76e9-40a9-8512-508fcbad04db: Location # Location
     88cf421d-710b-4816-8514-04106eedaf65: Text # Text
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
+    92ff0ea1-6f44-4bc6-bc7a-cea27f013bbe: Heading # Heading
     164a36d3-9f46-4b35-a479-5be5a853423a: Sections # Sections
     548a1d37-8055-49da-bbef-f889e2063e80: Image # Image
+    651dda4a-76fa-42f9-9b19-c7a226e9206f: Text # Text
     685c5545-2cb5-40df-88e2-8e42c2863b05: Subheading # Subheading
+    768d7160-9dae-417e-ba84-8069f4e91dee: Connect # Connect
     0841e1c3-f106-46a5-8b1d-614f501b455d: 'Heading And Text' # Heading And Text
     843ee478-160a-4e57-833b-3a0c12f04897: Contact # Contact
     957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
     2816a112-88bc-41d8-a9cf-ddb13c62c52a: Hero # Hero
+    4049ee79-3847-4f07-a590-9d315ead4b4b: 'Video and Content' # Video and Content
     4706fd84-7418-404a-98cc-edd315aafe63: Link # Link
     7166a4a2-0e75-4310-8ace-d1fe19425287: Text # Text
+    7841f0ef-0d53-403a-a09c-8da8c7c611e5: Heading # Heading
     59309d74-c6f5-44fc-8631-9509c05ae8ea: Button # Button
     95466301-dda8-48e5-b16a-8a4da9e461ec: Address # Address
     a57f88c4-6b1f-447b-afc9-c5f56310b915: Heading # Heading
@@ -58,24 +67,32 @@ meta:
     b3e112c6-aa4e-434a-957a-3ffd12bda688: Homepage # Homepage
     b10bde8e-ec67-4fb3-a707-69d4f8b42de5: 'Card and Content' # Card and Content
     b71ba86c-af02-473d-9860-ee966ee2aaaf: Heading # Heading
+    ba703cfc-2dec-45c9-b384-affd82102848: Connect # Connect
     bb45d14f-3863-4f58-9763-ef62548e58fd: Image # Image
     c09eeb97-2c44-4f62-8dc1-16fc5a0e6545: Text # Text
     c9c5ab1d-8925-4945-a073-7f638ed73cd0: Image # Image
     c38c487d-bc57-4c3c-ab08-8a52e7848fb8: Globals # Globals
     c52d8494-2514-437f-b221-482c169fd312: Heading # Heading
     c7928b13-5e75-473f-aeb5-70e5471809ea: Heading # Heading
+    d1d31b5c-0d7f-41b8-81df-fb739ef8adcb: Text # Text
     d24ba13c-999f-40ef-9083-6f899ba03bc3: About # About
     e4f0fd3b-af8a-4ee6-a094-79183b2de4f6: 'Card Title' # Card Title
+    e20a17b2-46d0-4a0c-9bd2-e3a73bcfd290: Heading # Heading
     e2084655-36e3-4221-84ec-99cb90eb395a: FAQ # FAQ
     ebc2a9d3-ec01-42dc-8574-fa1266a986c9: Media # Media
+    ec655241-8e31-4f8c-b8c0-efd8327f6fe8: Video # Video
     ee00a92d-d445-49c8-aef2-777434617a63: Subheading # Subheading
     efb0bb5b-afde-4f80-978e-2a15ce4a90cf: 'Image And Content' # Image And Content
     f1e03e5c-99ba-42bc-98a4-26808ccc4745: 'Times and Locations' # Times and Locations
-    f76a43a7-a1a0-40f9-b82c-0803a9257b79: 'Heading And Text' # Heading And Text
+    f76a43a7-a1a0-40f9-b82c-0803a9257b79: 'Heading and Text' # Heading and Text
     f17920de-fd30-4278-80c9-758a45945864: 'Image and Content' # Image and Content
     f89060f4-b7cc-4378-82bc-72270a7beb7f: Hero # Hero
     fe4865ba-4f7c-4d0b-b40d-d9f765030adc: Common # Common
 plugins:
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true

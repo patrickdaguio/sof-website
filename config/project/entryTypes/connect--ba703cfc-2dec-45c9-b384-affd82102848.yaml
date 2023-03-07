@@ -1,0 +1,79 @@
+fieldLayouts:
+  ba37a08b-91ca-4b10-beb7-5df35ac8467d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 296cb757-e6ff-4bb0-a3a2-24a6ba74687c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1fdce953-f995-4972-872d-727df763d639 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: add3eed5-1f61-4a1b-be5f-1a860de2c4d3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24b0ac47-958f-4081-b72a-6bb9de1335af # Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa2c2a10-f941-4ea9-bdb6-832ae213e7d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 47c5793a-e0d7-4c7c-acb1-d5d848723d46 # Video and Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8d3fb5b-ac48-4774-9ff1-251baed91a38
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3bc10f0f-5109-4e0c-9e12-be10007cd7cc
+        userCondition: null
+handle: connect
+hasTitleField: false
+name: Connect
+section: 768d7160-9dae-417e-ba84-8069f4e91dee # Connect
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -27,7 +27,7 @@ function toggleAccordion(): void {
         </svg>
       </button>
     </div>
-    <div class="mt-2.5 mb-5 overflow-hidden transition-all duration-500"
+    <div class="mt-2.5 mb-5 overflow-hidden transition-all duration-500 ease-in-out"
       :style="{ 'max-height': answerContainerMaxHeight + 'px' }" ref="answerContainer">
       <slot name="answer"></slot>
     </div>
