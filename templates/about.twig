@@ -3,6 +3,7 @@
 {% set headingAndTextBlock = entry.headingAndText.one() %}
 
 {% block main %}
+	{% cache %}
 	<section
 		class="relative h-[calc(100vh-11vh)]">
 		{# Mission #}
@@ -74,5 +75,5 @@
 			{% endfor %}
 		</div>
 	</section>
-
+	{% endcache %}
 {% endblock %}
