@@ -5,13 +5,13 @@
 {% block main %}
 	{% cache %}
 	<section
-		class="relative h-[calc(100vh-11vh)]">
+		class="relative h-[calc(100vh-112px)]">
 		{# Mission #}
-		<div class="wrapper h-full flex items-center">
+		<div class="container h-full flex items-center">
 			<div class="-mt-12">
-				<h1 class="font-extrabold text-9xl">{{headingAndTextBlock.heading}}</h1>
-				<p class="mt-8 mb-10 max-w-6xl text-xl">{{headingAndTextBlock.text|nl2br}}</p>
-				<a class="hover:text-white hover:bg-neutral-900 transition-colors border-2 border-neutral-900 w-60 text-center pt-2 pb-2.5 uppercase font-bold rounded-lg block" href="{{entry.linkField}}">{{entry.linkField.customText}}</a>
+				<h1 class="font-extrabold text-5xl sm:text-7xl lg:text-9xl">{{headingAndTextBlock.heading}}</h1>
+				<p class="mt-8 mb-10 max-w-6xl text-base sm:text-lg lg:text-xl">{{headingAndTextBlock.text|nl2br}}</p>
+				{# <a class="btn btn--sm uppercase" href="{{entry.linkField}}">{{entry.linkField.customText}}</a> #}
 			</div>
 			{# Visit Us #}
 			{% include "_components/visit-us" with { 'blueBg': true } only %}
@@ -20,10 +20,10 @@
 
 	{# Pastors #}
 	{% set cardAndContentBlocks = entry.cardAndContent.all() %}
-	<section class="my-24 space-y-20 wrapper overflow-x-hidden">
+	<section class="my-20 space-y-20 container">
 		{% for block in cardAndContentBlocks %}
 			{% set cardImage = block.image.one() ?? null %}
-			<div class="flex gap-20 items-center">
+			<div class="flex gap-20 items-center overflow-x-hidden py-4">
 				<div class="bg-gray-200 shadow-gray-400 p-6 pb-20 z-2 shadow-md border-r border-gray-400/70 overflow-hidden rounded-sm {% if loop.index is divisible by(2) %}order-2{% endif %}">
 					{% if cardImage %}
 						<picture>
@@ -48,13 +48,13 @@
 	</section>
 
 	{# Statement of Faith #}
-	<section class="wrapper">
-		<h2 class="text-9xl font-bold py-48 text-center italic">"{{entry.statement}}"</h2>
+	<section class="container">
+		<h2 class="text-4xl sm:text-7xl lg:text-9xl font-bold py-24 md:py-48 text-center italic">"{{entry.statement}}"</h2>
 	</section>
 
 	{# Ministries #}
 	{% set cardBlocks = entry.card.all() %}
-	<section class="wrapper mt-20 mb-32">
+	<section class="container mt-20 mb-32">
 		<h2 class="font-extrabold text-9xl mb-16">{{entry.heading}}</h2>
 		<div class="grid grid-cols-3 gap-y-12 gap-x-16">
 			{% for card in cardBlocks %}

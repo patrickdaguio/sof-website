@@ -2,7 +2,7 @@
 
 {% block main %}
 	<section class="relative h-[calc(100vh-11vh)]">
-		<div class="wrapper h-full flex items-center">
+		<div class="container h-full flex items-center">
 			<div class="-mt-20 text-center">
 				<h1 class="font-extrabold text-9xl mb-16 text-zinc-900">{{entry.heading}}</h1>
 				<a href="#details">
@@ -18,7 +18,7 @@
 
 	{# Times & Location #}
 	{% set timesAndLocationBlock = entry.timesAndLocations.one() %}
-	<section class="wrapper mb-24 text-zinc-900" id="details">
+	<section class="container mb-24 text-zinc-900" id="details">
 		<h2 class="text-7xl font-bold py-12">Times and Locations</h2>
 		<div class="flex h-auto gap-12 items-center">
 			{% set locationImage = timesAndLocationBlock.image.one() ?? null %}
@@ -70,7 +70,7 @@
 		</div>
 
 		{% set imageAndContentBlock = entry.imageAndContent.one() %}
-		<div class="wrapper relative text-white py-32">
+		<div class="container relative text-white py-32">
 			{% set contentImage = imageAndContentBlock.image.one() ?? null %}
 			<div class="flex items-center gap-12">
 				<div class="flex items-center justify-center">
@@ -97,7 +97,7 @@
 	</section>
 
 	{# FAQ #}
-	<section class="wrapper mt-24 mb-24 text-zinc-900">
+	<section class="container mt-24 mb-24 text-zinc-900">
 		<h2 class="text-7xl font-bold mb-12">FAQ</h2>
 		{% set faqBlocks = entry.faq.all() %}
 

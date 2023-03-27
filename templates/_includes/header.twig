@@ -1,24 +1,26 @@
-<header>
-	<div class="wrapper">
-		<div
-			class="flex justify-between items-center">
+<header
+	class="container relative">
 
-			{# Logo #}
-			<div>
-				<a href="/">
-					{{ svg('@webroot/static/logo.svg')|attr({class:['w-16']}) }}
-				</a>
-			</div>
+	{# Desktop #}
+	<div
+		class="justify-between items-center md:flex hidden h-28">
 
-			{# Navbar #}
-			<nav class="navbar">
-				<ul>
-					<li><a href="/about">About</a></li>
-					<li><a href="/connect">Connect</a></li>
-					<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+		{# Logo #}
+		<a href="/">
+			{{ svg('@webroot/static/logo.svg')|attr({class:['w-16']}) }}
+		</a>
+
+		{# Navbar #}
+		<nav class="navbar">
+			<ul>
+				<li><a href="/about">About</a></li>
+				<li><a href="/connect">Connect</a></li>
+				<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</nav>
 	</div>
+
+	{# Mobile #}
+	<mobile-navbar></mobile-navbar>
 </header>

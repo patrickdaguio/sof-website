@@ -1,0 +1,5 @@
+{% macro isLinkActive(segment) %}
+	{% if craft.app.request.segments|first == segment %}
+		underline
+	{% endif %}
+{% endmacro %}
