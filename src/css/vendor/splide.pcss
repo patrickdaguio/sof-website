@@ -1,0 +1,28 @@
+@import "@splidejs/vue-splide/css";
+
+.splide {
+  &__pagination {
+  }
+  &__arrows {
+    @apply absolute -bottom-12 left-1/2 -translate-x-1/2;
+
+    &__arrow {
+      &--prev {
+        @apply left-0;
+      }
+
+      &--next {
+        @apply right-0;
+      }
+    }
+  }
+
+  .is-active {
+    img {
+      @apply scale-105;
+    }
+    div {
+      @apply bg-black/30;
+    }
+  }
+}

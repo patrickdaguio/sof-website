@@ -44,6 +44,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 176a94e5-7f6d-456a-bf5e-d0e3fb463a53 # Subheading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97b05d18-fc7c-499a-a327-c885edc2d98f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: f1e03e5c-99ba-42bc-98a4-26808ccc4745 # Times and Locations
             instructions: null
             label: null
@@ -51,18 +63,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7a7bcd8a-4a70-4221-b29f-38a4739c34e8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 24b0ac47-958f-4081-b72a-6bb9de1335af # Background Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7e1ec3e4-f04c-41d2-9d09-f1dd7dd7fe28
             userCondition: null
             warning: null
             width: 100
@@ -93,10 +93,10 @@ fieldLayouts:
         name: Content
         uid: ca12cc10-d547-46ed-b942-b06274423157
         userCondition: null
-handle: contact
+handle: visitUs
 hasTitleField: false
-name: Contact
-section: 24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3 # Contact
+name: 'Visit Us'
+section: 24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3 # Visit Us
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

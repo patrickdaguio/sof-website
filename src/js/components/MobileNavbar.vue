@@ -38,11 +38,10 @@ function openNavbar() {
   if (!navOpen.value) navOpen.value = true
   else setTimeout(() => navOpen.value = false, 300)
 }
-console.log(window.location.pathname)
 </script>
 
 <template>
-  <div class="flex justify-between md:hidden items-center h-28">
+  <div class="flex justify-between md:hidden items-center h-24">
     <button type="button" @click="openNavbar">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-7 h-7">

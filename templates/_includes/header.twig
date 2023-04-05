@@ -1,22 +1,25 @@
+{% from "_macros/isLinkActive" import isLinkActive %}
+
 <header
 	class="container relative">
 
 	{# Desktop #}
 	<div
-		class="justify-between items-center md:flex hidden h-28">
+		class="justify-between items-center md:flex hidden h-24">
 
 		{# Logo #}
 		<a href="/">
-			{{ svg('@webroot/static/logo.svg')|attr({class:['w-16']}) }}
+			{{ svg('@webroot/static/logo.svg')|attr({class:['w-14']}) }}
 		</a>
 
 		{# Navbar #}
 		<nav class="navbar">
 			<ul>
-				<li><a href="/about">About</a></li>
-				<li><a href="/connect">Connect</a></li>
+				<li><a class="{{isLinkActive('about')}}" href="/about">About</a></li>
+				<li><a class="{{isLinkActive('connect')}}" href="/connect">Connect</a></li>
 				<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a class="{{isLinkActive('events')}}" href="/events">Events</a></li>
+				<li><a class="{{isLinkActive('visit-us')}}" href="/visit-us">Visit Us</a></li>
 			</ul>
 		</nav>
 	</div>

@@ -4,17 +4,22 @@
 		{% block headStart %}{% endblock %}
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta charset="utf-8"/>
-		<title>SOF | Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
-		<meta name="referrer" content="origin-when-cross-origin"/> {% block headEnd %}{% endblock %}
-		</head>
-		<body>
-			{% block bodyStart %}{% endblock %}
+		<meta name="referrer" content="origin-when-cross-origin"/>
 
-			<div id="app"> {% block body %}{% endblock %}
-				</div>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-				{{ craft.vite.script("/src/js/main.ts") }}
-				{% block bodyEnd %}{% endblock %}
-			</body>
-		</html>
+		<title>Shield of Faith</title>
+		{% block headEnd %}{% endblock %}
+	</head>
+	<body>
+		{% block bodyStart %}{% endblock %}
+
+		<div id="app">{% block body %}{% endblock %}</div>
+
+		{{ craft.vite.script("/src/js/main.ts") }}
+		{% block bodyEnd %}{% endblock %}
+	</body>
+</html>

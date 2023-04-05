@@ -1,12 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
-handle: contact
-name: Contact
+handle: visitUs
+name: 'Visit Us'
 propagationMethod: all
 siteSettings:
   92c2ec1a-379c-4edf-83c4-d3a564b9010a: # SOF
     enabledByDefault: true
     hasUrls: true
-    template: contact.twig
-    uriFormat: contact
+    template: visit-us.twig
+    uriFormat: visit-us
 type: single

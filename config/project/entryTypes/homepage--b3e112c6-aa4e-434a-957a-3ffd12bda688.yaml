@@ -44,18 +44,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 24b0ac47-958f-4081-b72a-6bb9de1335af # Background Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5dd96b63-913c-49c4-a611-623474ee8ab1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: f17920de-fd30-4278-80c9-758a45945864 # Image and Content
             instructions: null
             label: null

@@ -1,4 +1,4 @@
-dateModified: 1678222671
+dateModified: 1680673399
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
@@ -36,7 +36,7 @@ meta:
     8d57703e-7d08-4887-b294-1fd3701e52ec: Statement # Statement
     16e9beaa-fe42-47e6-b8e8-e5a4c0d3e56b: Image # Image
     24b0ac47-958f-4081-b72a-6bb9de1335af: 'Background Image' # Background Image
-    24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3: Contact # Contact
+    24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3: 'Visit Us' # Visit Us
     25a1f7ca-1ee1-4f44-8691-62b798d11783: Times # Times
     37e508d3-e65e-473f-9835-f157fde7f284: Homepage # Homepage
     47c5793a-e0d7-4c7c-acb1-d5d848723d46: 'Video and Content' # Video and Content
@@ -47,12 +47,13 @@ meta:
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
     92ff0ea1-6f44-4bc6-bc7a-cea27f013bbe: Heading # Heading
     164a36d3-9f46-4b35-a479-5be5a853423a: Sections # Sections
+    176a94e5-7f6d-456a-bf5e-d0e3fb463a53: Subheading # Subheading
     548a1d37-8055-49da-bbef-f889e2063e80: Image # Image
     651dda4a-76fa-42f9-9b19-c7a226e9206f: Text # Text
     685c5545-2cb5-40df-88e2-8e42c2863b05: Subheading # Subheading
     768d7160-9dae-417e-ba84-8069f4e91dee: Connect # Connect
     0841e1c3-f106-46a5-8b1d-614f501b455d: 'Heading And Text' # Heading And Text
-    843ee478-160a-4e57-833b-3a0c12f04897: Contact # Contact
+    843ee478-160a-4e57-833b-3a0c12f04897: 'Visit Us' # Visit Us
     957af4ac-6434-465a-a86f-05e9f006c60e: Email # Email
     2816a112-88bc-41d8-a9cf-ddb13c62c52a: Hero # Hero
     4049ee79-3847-4f07-a590-9d315ead4b4b: 'Video and Content' # Video and Content

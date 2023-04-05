@@ -1,0 +1,110 @@
+{% extends "_layouts/base" %}
+
+{% block main %}
+	<section
+		class="relative h-[calc(100vh-6rem)]">
+		{# Mission #}
+		<div class="container h-full flex items-center">
+			<div class="-mt-12 text-gray-dark">
+				<h1 class="font-extrabold text-5xl lg:text-7xl">{{entry.heading}}</h1>
+				<h2 class="mt-4 text-3xl font-semibold">{{entry.subheading}}</h2>
+			</div>
+			{# Visit Us #}
+			{% include "_components/visit-us" only %}
+		</div>
+	</section>
+
+	{# Times & Location #}
+	{% set timesAndLocationBlock = entry.timesAndLocations.one() %}
+	<section class="container mb-36 text-gray-dark">
+		<h3 class="text-2xl font-extrabold uppercase tracking-widest">Where to find us 	&gt; 	&gt; 	&gt;</h3>
+		<h2 class="text-6xl font-bold pb-10 pt-2.5 tracking-tighter">{{timesAndLocationBlock.heading}}</h2>
+		<div class="flex h-auto gap-16 items-center">
+			{% set locationImage = timesAndLocationBlock.image.one() ?? null %}
+			<div class="rounded-2xl w-1/2 overflow-hidden min-h-full">
+				{% if locationImage %}
+					<picture>
+						{% if craft.app.images.supportsWebP %}
+							<source type="image/webp" srcset="{{ locationImage.url({ width: 600, format: 'webp' }) }} 600w">
+						{% endif %}
+						<img src="{{ locationImage.url({ width: 600, height: 500 }) }}" alt="{{ locationImage.title }}" class="object-cover w-full h-full">
+					</picture>
+				{% else %}
+					<img src="{{ locationImage.url }}" alt="{{ locationImage.title }}" class="border border-red-500 p-2">
+				{% endif %}
+			</div>
+			<div class="w-1/2">
+				<h3 class="text-4xl font-extrabold tracking-tighter">{{timesAndLocationBlock.location}}</h3>
+				<address class="text-xl font-medium not-italic my-6">{{timesAndLocationBlock.address|nl2br}}</address>
+				<table>
+					<tbody valign="top">
+						{% for time in timesAndLocationBlock.times %}
+							<tr class="grid grid-cols-[1fr,max-content,1fr] gap-x-0.5 uppercase font-medium text-xl">
+								<td>{{time.col1}}</td>
+								<td class="-ml-0.5 -mt-0.5">|</td>
+								<td>{{time.col2}}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				<a class="btn mt-10" href="{{timesAndLocationBlock.button.linkedUrl}}">{{timesAndLocationBlock.button.customText}}</a>
+			</div>
+		</div>
+	</section>
+
+	{# Ushers #}
+	<section class="relative my-36">
+		{% set imageAndContentBlock = entry.imageAndContent.one() %}
+		<div class="container relative text-gray-darkest">
+			{% set contentImage = imageAndContentBlock.image.one() ?? null %}
+			<div class="flex items-center gap-16">
+				<div class="flex items-center justify-center w-1/2">
+					<div class="z-2">
+						<h3 class="text-2xl uppercase font-semibold tracking-widest">{{imageAndContentBlock.subheading}}</h3>
+						<h2 class="text-6xl font-extrabold mb-8 mt-1 tracking-tighter uppercase">{{imageAndContentBlock.heading}}</h2>
+						<p class="text-xl">{{imageAndContentBlock.text}}</p>
+					</div>
+				</div>
+				<div class="overflow-hidden rounded-2xl w-1/2 min-h-full">
+					{% if contentImage %}
+						<picture>
+							{% if craft.app.images.supportsWebP %}
+								<source type="image/webp" srcset="{{ contentImage.url({ width: 2000, format: 'webp' }) }} 2000w">
+							{% endif %}
+							<img src="{{ contentImage.url({ width: 2000, height: 500 }) }}" srcset="{{ contentImage.url({ width: 2000}) }} 2000w" alt="{{ contentImage.title }}" class="block object-cover h-full w-full">
+						</picture>
+					{% else %}
+						<img src="{{ contentImage.url }}" alt="{{ contentImage.title }}" class="border border-red-500 p-2">
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{# FAQ #}
+	<section class="container mt-24 mb-24 text-gray-dark">
+		<h2 class="text-6xl font-extrabold mb-16 tracking-tighter">FAQ</h2>
+		{% set faqBlocks = entry.faq.all() %}
+
+		{% for faq in faqBlocks %}
+			<accordion>
+				<template v-slot:question>
+					{{faq.question}}
+				</template>
+				<template v-slot:answer>
+					{{faq.text|nl2br}}
+				</template>
+			</accordion>
+		{% endfor %}
+
+		<div class="mt-24">
+			<p class="text-3xl font-semibold tracking-tighter">Have any questions?
+				<span class="block mt-1.5">Contact us on Facebook at
+					<a href="https://www.facebook.com/shieldofaith" target="_blank" class="ml-1 text-blue-primary hover:text-blue-primary/90 transition-colors font-bold underline">@shieldofaith</a>
+				</span>
+			</p>
+		</div>
+
+	</section>
+
+{% endblock %}

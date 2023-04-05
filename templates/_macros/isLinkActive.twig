@@ -1,5 +1,5 @@
 {% macro isLinkActive(segment) %}
 	{% if craft.app.request.segments|first == segment %}
-		underline
+		navbar--active
 	{% endif %}
 {% endmacro %}
