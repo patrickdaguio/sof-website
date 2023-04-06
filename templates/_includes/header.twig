@@ -15,11 +15,11 @@
 		{# Navbar #}
 		<nav class="navbar">
 			<ul>
-				<li><a class="{{isLinkActive('about')}}" href="/about">About</a></li>
-				<li><a class="{{isLinkActive('connect')}}" href="/connect">Connect</a></li>
+				<li><a href="/about"class="{{ isLinkActive('about')}}">About</a></li>
+				<li><a href="/connect"class="{{ isLinkActive('connect')}}">Connect</a></li>
 				<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
-				<li><a class="{{isLinkActive('events')}}" href="/events">Events</a></li>
-				<li><a class="{{isLinkActive('visit-us')}}" href="/visit-us">Visit Us</a></li>
+				<li><a href="/events" class=" {{ isLinkActive('events')}}">Events</a></li>
+				<li><a href="/visit-us" class=" {{ isLinkActive('visit-us')}}">Visit Us</a></li>
 			</ul>
 		</nav>
 	</div>

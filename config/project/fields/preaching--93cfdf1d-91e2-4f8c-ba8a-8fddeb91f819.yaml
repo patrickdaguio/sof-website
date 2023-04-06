@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe4865ba-4f7c-4d0b-b40d-d9f765030adc # Common
+handle: preaching
+instructions: null
+name: Preaching
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_preaching}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

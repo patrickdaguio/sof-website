@@ -2,84 +2,92 @@
 {% extends "_layouts/base" %}
 
 {% set imageAndContentBlock = entry.imageAndContent.one() %}
-{% set cardAndContentBlock = entry.cardAndContent.one() %}
+{% set heroBlock = entry.hero.one() %}
 
 {% block main %}
-	{# Hero Section #}
-	{% include "_components/hero" %}
+	<section
+		class="relative h-[calc(100vh-6rem)]">
+		{# Mission #}
+		<div class="container h-full flex items-center text-gray-dark">
+			<div class="-mt-12 max-w-2xl">
+				<h1 class="font-extrabold text-5xl lg:text-8xl tracking-tighter">{{heroBlock.heading}}</h1>
+				<p class="mt-10 text-xl font-extrabold uppercase tracking-widest">{{heroBlock.subheading}}</p>
+			</div>
+			{# Visit Us #}
+			{% include "_components/visit-us" only %}
+		</div>
+	</section>
+
 
 	{# Filler #}
 	<div class="h-96 bg-white flex justify-center items-center text-4xl font-bold">
 		<p class="border-2 border-gray-900 p-36">Hype Video</p>
 	</div>
 
-	{# Image w/ Content and Background #}
-	<section class="relative">
-		{% set bgImage = entry.backgroundImage.one() ?? null %}
-
-		<div class="absolute w-full h-full top-0 z-0">
-			{% if bgImage %}
-				<picture>
-					{% if craft.app.images.supportsWebP %}
-						<source type="image/webp" srcset="{{ bgImage.url({ width: 2000, format: 'webp' }) }} 2000w">
-					{% endif %}
-					<img src="{{ bgImage.url({ width: 2000, height: 500 }) }}" alt="{{ bgImage.title }}" class="block object-cover w-full h-full">
-				</picture>
-			{% else %}
-				<img src="{{ bgImage.url }}" alt="{{ bgImage.title }}" class="">
-			{% endif %}
+	{# Preaching #}
+	{% set preaching = entry.preaching.one() %}
+	<section class="relative mt-36 mb-60 container">
+		<h2 class="text-3xl tracking-widest uppercase text-gray-dark font-extrabold">Latest Sermon &gt; &gt; &gt;</h2>
+		<h3 class="text-8xl tracking-tighter text-gray-dark mt-4 mb-6 font-extrabold">{{preaching.heading}}</h3>
+		<h4 class="text-2xl tracking-widest font-medium mt-3">{{preaching.subheading}}</h4>
+		{% set video = craft.embeddedAssets.get(preaching.video.one()) %}
+		<div class="h-[550px] rounded-2xl overflow-hidden mt-16 pb-[56.25%] relative">
+			{{ video.getIframeCode( ['controls=1'], ['loading=lazy', 'width=100%', 'height=100%'],['frameborder'])|attr({class:['absolute top-0 left-0 w-full h-full']}) }}
 		</div>
+	</section>
 
-		{# Image with content #}
-		<div class="container relative text-white py-32">
-			<p class="uppercase text-2xl font-bold tracking-wide mb-8">Here at Shield of Faith >>></p>
-			<div class="flex items-center justify-center">
-				<div class="z-2">
-					<div class="max-w-md">
-						<h2 class="capitalize text-[156px] font-black mb-16 leading-none">{{imageAndContentBlock.heading}}</h2>
-						<a class="btn btn--white" href="{{imageAndContentBlock.contentEntry.one().url}}">Plan a visit</a>
-					</div>
-				</div>
-				{% set contentImage = imageAndContentBlock.image.one() ?? null %}
-				<div class="overflow-hidden w-full h-full">
+	{# Pastors #}
+	<section class="relative my-36">
+		{% set imageAndContentBlock = entry.imageAndContent.one() %}
+		<div class="container relative text-gray-dark">
+			{% set contentImage = imageAndContentBlock.image.one() ?? null %}
+			<div class="flex items-center gap-16">
+				<div class="overflow-hidden rounded-2xl w-1/2 min-h-full">
 					{% if contentImage %}
 						<picture>
 							{% if craft.app.images.supportsWebP %}
 								<source type="image/webp" srcset="{{ contentImage.url({ width: 2000, format: 'webp' }) }} 2000w">
 							{% endif %}
-							<img src="{{ contentImage.url({ width: 2000, height: 500 }) }}" srcset="{{ contentImage.url({ width: 2000}) }} 2000w" alt="{{ contentImage.title }}" class="block object-cover h-full w-full rounded-2xl">
+							<img src="{{ contentImage.url({ width: 2000, height: 500 }) }}" srcset="{{ contentImage.url({ width: 2000}) }} 2000w" alt="{{ contentImage.title }}" class="block object-cover h-full w-full">
 						</picture>
 					{% else %}
 						<img src="{{ contentImage.url }}" alt="{{ contentImage.title }}" class="border border-red-500 p-2">
 					{% endif %}
 				</div>
+				<div class="flex items-center justify-center w-1/2">
+					<div class="z-2">
+						<h3 class="text-4xl uppercase font-semibold tracking-widest">{{imageAndContentBlock.subheading}}</h3>
+						<h2 class="text-8xl font-extrabold my-6 tracking-tighter uppercase">{{imageAndContentBlock.heading}}</h2>
+						<p class="text-2xl mb-12">{{imageAndContentBlock.text}}</p>
+						<a href="{{imageAndContentBlock.contentEntry.one.url}}" class="btn">Learn More</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	{# Pastors #}
-	<section class="py-28">
-		<div class="container relative">
-			<div class="flex w-full gap-12">
-				{% set cardImage = cardAndContentBlock.image.one() ?? null %}
-				<div class="bg-gray-200 shadow-gray-400 p-6 pb-20 shadow-md border-r border-gray-400/70 overflow-hidden rounded-sm">
-					{% if cardImage %}
-						<picture>
-							{% if craft.app.images.supportsWebP %}
-								<source type="image/webp" srcset="{{ cardImage.url({ width: 640, format: 'webp' }) }} 640w">
-							{% endif %}
-							<img src="{{ cardImage.url({ width: 640, height: 640 }) }}" srcset="{{ cardImage.url({ width: 640 }) }} 640w" alt="{{ cardImage.title }}" class="block object-cover h-full w-full max-h-[40rem]">
-						</picture>
-					{% else %}
-						<img src="{{ cardImage.url }}" alt="{{ cardImage.title }}" class="border border-red-500 p-2">
-					{% endif %}
-				</div>
-				<div class="py-4 px-8 text-zinc-900">
-					<h3 class="text-3xl font-medium uppercase">{{cardAndContentBlock.subheading}}</h3>
-					<h2 class="text-9xl font-bold uppercase mt-2 mb-8">{{cardAndContentBlock.heading}}</h2>
-					<p class="text-xl">{{cardAndContentBlock.text}}</p>
-				</div>
+	{# Family #}
+	{% set videoAndContent = entry.videoAndContent.one() %}
+	<section class="container my-36">
+		<h2 class="text-3xl tracking-widest text-gray-dark font-extrabold uppercase mb-4">Here at Shield of faith &gt; &gt; &gt;</h2>
+		<div class="flex gap-12 items-center justify-between">
+			<h3 class="text-8xl w-1/2 font-extrabold capitalize text-gray-dark">{{videoAndContent.heading}}</h3>
+			<div class="w-1/2 min-h-full rounded-2xl overflow-hidden pb-[26.5%] relative">
+				{{ video.getIframeCode( ['controls=1'], ['loading=lazy'])|attr({class:['absolute top-0 left-0 w-full h-full']}) }}
 			</div>
 		</div>
+	</section>
+
+	{# Contact Form #}
+	{% set contactForm = craft.entries.section('contactForm').one() %}
+	<section class="container my-64 text-gray-dark">
+		<h2 class="text-6xl tracking-tighter font-extrabold mb-8">{{contactForm.heading}}</h2>
+		<p class="text-2xl">{{contactForm.subheading}}</p>
+		<contact-form>
+			<template v-slot:hidden-inputs>
+				{{csrfInput()}}
+				{{actionInput('contact-form/send')}}
+			</template>
+		</contact-form>
 	</section>
 {% endblock %}
