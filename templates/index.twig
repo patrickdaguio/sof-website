@@ -18,11 +18,38 @@
 		</div>
 	</section>
 
-
 	{# Filler #}
 	<div class="h-96 bg-white flex justify-center items-center text-4xl font-bold">
 		<p class="border-2 border-gray-900 p-36">Hype Video</p>
 	</div>
+
+	{# Ministries #}
+	<section class="relative my-36">
+		{% set ministries = craft.entries().section('ministries').all() %}
+		<div class="">
+			<splide aria-labelledby="Our Ministries" :has-track="false" :options="{ perMove: 1, focus: 'center', keyboard: 'global', pagination: false, arrows: false, autoplay: 'play', rewind: true}">
+				<splide-track>
+					{% for ministry in ministries %}
+						{% set ministryImage = ministry.ministryImage.one() ?? null %}
+						<splide-slide class="group relative overflow-hidden cursor-grab max-w-xs">
+							{% if ministryImage %}
+								<picture>
+									{% if craft.app.images.supportsWebP %}
+										<source type="image/webp" srcset="{{ ministryImage.url({ width: 500, format: 'webp' }) }} 1000w">
+									{% endif %}
+									<img src="{{ ministryImage.url({ width: 500, height: 500 }) }}" srcset="{{ ministryImage.url({ width: 500 }) }} 1000w" alt="{{ ministryImage.title }}" class="object-cover h-full w-full group-hover:scale-105 transition-transform">
+								</picture>
+							{% else %}
+								<img alt="{{ ministry.title }}" class="border border-red-500 p-2">
+							{% endif %}
+							<span class="text-white text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl z-2 font-bold">{{ministry.title}}</span>
+							<div class="bg-black/60 z-1 absolute top-0 left-0 w-full h-full group-hover:bg-black/30 transition-colors"></div>
+						</splide-slide>
+					{% endfor %}
+				</splide-track>
+			</splide>
+		</div>
+	</section>
 
 	{# Preaching #}
 	{% set preaching = entry.preaching.one() %}

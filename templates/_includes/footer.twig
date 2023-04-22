@@ -31,6 +31,12 @@
 				</ul>
 			</div>
 
+			{# Information #}
+			<div class="space-y-3.5 justify-self-end">
+				<strong class="font-bold text-xl uppercase mb-3.5">Location</strong>
+				<address class="not-italic leading-7">{{contact.address|nl2br}}</address>
+			</div>
+
 			{# Socials #}
 			<div class="justify-self-center space-y-3.5">
 				<strong class="font-bold text-xl uppercase mb-3.5">Socials</strong>
@@ -38,12 +44,6 @@
 					<a class="inline-block" href="mailto:{{contact.email}}">{{contact.email}}</a>
 					<a class="block" href="tel:{{contact.contactNumber|replace(' ', '')}}">{{contact.contactNumber}}</a>
 				</div>
-			</div>
-
-			{# Information #}
-			<div class="space-y-3.5 justify-self-end">
-				<strong class="font-bold text-xl uppercase mb-3.5">Location</strong>
-				<address class="not-italic leading-7">{{contact.address|nl2br}}</address>
 			</div>
 		</div>
 		<h5 class="mt-10">&copy; 2023 Made with love, by Shield of Faith Media &hearts;</h5>

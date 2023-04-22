@@ -1,9 +1,16 @@
-dateModified: 1680763498
+dateModified: 1682179463
 email:
   fromEmail: coderpatdaguio@gmail.com
   fromName: SOF
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  ministries:
+    hasUrls: true
+    name: Ministries
+    settings:
+      path: '@webroot/ministries'
+    type: craft\fs\Local
+    url: /ministries
   public:
     hasUrls: true
     name: Public
@@ -34,12 +41,16 @@ meta:
     6c9aecf5-bc73-4837-b9dc-b4dad48c0968: Question # Question
     6e3d698e-fc64-426a-98bd-b65a1e6002fa: Heading # Heading
     6e32fb88-4afe-4da2-ae2d-3203b6b7466a: Address # Address
+    06fb6f17-893a-4f8b-aa7b-5b375931547f: 'Event Index' # Event Index
+    6ff94686-aa2b-4350-8eab-2789a36a50bc: Event # Event
     7aa4376d-b596-4d10-bac2-b7520f83fe95: 'Content Builder' # Content Builder
     7b78f56b-ac40-4c34-8d37-2645c7db3424: 'Card and Content' # Card and Content
     7d573536-0a48-4754-9266-291e10a305c4: 'Times and Location' # Times and Location
     8a76b890-871f-4ddc-b698-6d29d4a8da3c: 'Video Content' # Video Content
     8ce50fd8-cee6-48c4-8a8a-923e74f5c2ec: Subheading # Subheading
     8d57703e-7d08-4887-b294-1fd3701e52ec: Statement # Statement
+    9ac42666-1fe3-4253-af8f-8d3811880d08: Ministries # Ministries
+    9f250a3b-3945-4344-91d9-06c82d884e3a: 'Ministry Image' # Ministry Image
     16e9beaa-fe42-47e6-b8e8-e5a4c0d3e56b: Image # Image
     24b0ac47-958f-4081-b72a-6bb9de1335af: 'Background Image' # Background Image
     24b7c0fa-cf4a-481e-8841-cf8f89ec4ac3: 'Visit Us' # Visit Us
@@ -48,14 +59,17 @@ meta:
     37e508d3-e65e-473f-9835-f157fde7f284: Homepage # Homepage
     47c5793a-e0d7-4c7c-acb1-d5d848723d46: 'Video and Content' # Video and Content
     60a354da-c6c2-43a4-8ee3-50334d93b463: Video # Video
+    73d111c9-de63-4afa-b708-9a3ce35bc668: Events # Events
     74fcbf63-5acc-4434-9703-bcb1ee3bb3be: Image # Image
     81a3a0f5-76e9-40a9-8512-508fcbad04db: Location # Location
     88cf421d-710b-4816-8514-04106eedaf65: Text # Text
     92c2ec1a-379c-4edf-83c4-d3a564b9010a: SOF # SOF
     92ff0ea1-6f44-4bc6-bc7a-cea27f013bbe: Heading # Heading
     93cfdf1d-91e2-4f8c-ba8a-8fddeb91f819: Preaching # Preaching
+    97e930db-5137-43c1-a709-f12ecf03740c: 'Event Index' # Event Index
     164a36d3-9f46-4b35-a479-5be5a853423a: Sections # Sections
     176a94e5-7f6d-456a-bf5e-d0e3fb463a53: Subheading # Subheading
+    487ca65d-4c50-4516-aad8-b6bac25368a4: Image # Image
     548a1d37-8055-49da-bbef-f889e2063e80: Image # Image
     651dda4a-76fa-42f9-9b19-c7a226e9206f: Text # Text
     685c5545-2cb5-40df-88e2-8e42c2863b05: Subheading # Subheading
@@ -71,10 +85,13 @@ meta:
     7841f0ef-0d53-403a-a09c-8da8c7c611e5: Heading # Heading
     43001d53-97d1-43b7-b0e2-ef1fa667c90a: Image # Image
     59309d74-c6f5-44fc-8631-9509c05ae8ea: Button # Button
+    976496ca-5572-4eae-a906-02656955413d: Ministries # Ministries
     95466301-dda8-48e5-b16a-8a4da9e461ec: Address # Address
     a57f88c4-6b1f-447b-afc9-c5f56310b915: Heading # Heading
     a69ad962-1e03-409e-b6fa-97b5d6a4dbfe: Card # Card
     a865f728-4794-40d7-9fe2-db08674dea86: Card # Card
+    aabf2ed1-3c55-4976-8d52-4fcd11a9f132: Ministry # Ministry
+    b0f09634-5678-45e3-bf4f-5a9678e10c3b: Date # Date
     b3e112c6-aa4e-434a-957a-3ffd12bda688: Homepage # Homepage
     b5b358ef-a788-4988-8563-3b71c7554982: 'Contact Form' # Contact Form
     b10bde8e-ec67-4fb3-a707-69d4f8b42de5: 'Card and Content' # Card and Content
@@ -94,6 +111,7 @@ meta:
     e20a17b2-46d0-4a0c-9bd2-e3a73bcfd290: Heading # Heading
     e2084655-36e3-4221-84ec-99cb90eb395a: FAQ # FAQ
     ebc2a9d3-ec01-42dc-8574-fa1266a986c9: Media # Media
+    ec01bd9a-d1fa-450c-8fb7-8e17cffa861f: 'Rich Content' # Rich Content
     ec655241-8e31-4f8c-b8c0-efd8327f6fe8: Video # Video
     ee00a92d-d445-49c8-aef2-777434617a63: Subheading # Subheading
     efb0bb5b-afde-4f80-978e-2a15ce4a90cf: 'Image And Content' # Image And Content

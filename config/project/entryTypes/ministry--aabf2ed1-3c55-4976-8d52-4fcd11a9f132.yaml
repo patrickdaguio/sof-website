@@ -1,0 +1,55 @@
+fieldLayouts:
+  e08dff17-3a17-45b8-bb61-bbf63fb6d91f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7ac1ea95-086b-443f-968c-0fe9e665baca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9f250a3b-3945-4344-91d9-06c82d884e3a # Ministry Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56ba6ee2-7f3c-4cf8-b6a8-d0b7a1573aa2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4422019d-1d76-4a7f-b1e9-050d37f99e88
+        userCondition: null
+handle: ministry
+hasTitleField: true
+name: Ministry
+section: 976496ca-5572-4eae-a906-02656955413d # Ministries
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

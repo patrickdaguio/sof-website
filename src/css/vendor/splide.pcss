@@ -1,20 +1,22 @@
-@import "@splidejs/vue-splide/css";
+@import "@splidejs/vue-splide/css/core";
 
 .splide {
   &__pagination {
-  }
-  &__arrows {
-    @apply absolute -bottom-12 left-1/2 -translate-x-1/2;
+    &__page {
+      @apply block w-5 h-5 rounded-full bg-[#D9D9D9] transition;
 
-    &__arrow {
-      &--prev {
-        @apply left-0;
+      &:hover {
+        @apply bg-[#595959];
       }
 
-      &--next {
-        @apply right-0;
+      &.is-active {
+        @apply bg-[#595959];
       }
     }
+  }
+
+  &__arrow {
+    @apply text-[#595959];
   }
 
   .is-active {

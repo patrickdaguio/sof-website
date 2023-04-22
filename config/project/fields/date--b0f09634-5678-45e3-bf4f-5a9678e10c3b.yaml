@@ -1,0 +1,17 @@
+columnSuffix: eljtifmb
+contentColumnType: datetime
+fieldGroup: fe4865ba-4f7c-4d0b-b40d-d9f765030adc # Common
+handle: date
+instructions: null
+name: Date
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

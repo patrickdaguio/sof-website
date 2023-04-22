@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: eventIndex
+name: 'Event Index'
+propagationMethod: all
+siteSettings:
+  92c2ec1a-379c-4edf-83c4-d3a564b9010a: # SOF
+    enabledByDefault: true
+    hasUrls: true
+    template: events/index.twig
+    uriFormat: events
+type: single

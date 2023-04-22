@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: events
+name: Events
+propagationMethod: all
+siteSettings:
+  92c2ec1a-379c-4edf-83c4-d3a564b9010a: # SOF
+    enabledByDefault: true
+    hasUrls: true
+    template: events/_entry
+    uriFormat: 'events/{slug}'
+type: channel

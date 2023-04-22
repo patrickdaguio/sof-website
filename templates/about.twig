@@ -9,7 +9,7 @@
 		<div class="container h-full flex items-center">
 			<div class="-mt-12">
 				<h1 class="font-extrabold text-5xl lg:text-7xl text-gray-dark">{{headingAndTextBlock.heading}}</h1>
-				<p class="mt-10 max-w-6xl text-base sm:text-lg lg:text-xl">{{headingAndTextBlock.text|nl2br}}</p>
+				<p class="mt-10 text-base sm:text-lg lg:text-xl">{{headingAndTextBlock.text|nl2br}}</p>
 			</div>
 			{# Visit Us #}
 			{% include "_components/visit-us" only %}
@@ -39,7 +39,7 @@
 						<h2 class="text-3xl uppercase font-medium mb-1">{{block.heading}}</h2>
 						<h3 class="font-extrabold text-3xl">{{block.subheading}}</h3>
 					</div>
-					<p class="{% if loop.index is divisible by(2) %}pl-10{% else %} pr-10{% endif %}">{{block.text|nl2br}}</p>
+					<p class="leading-6 {% if loop.index is divisible by(2) %}pl-10{% else %} pr-10{% endif %}">{{block.text|nl2br}}</p>
 				</div>
 			</div>
 		{% endfor %}
@@ -55,14 +55,14 @@
 
 	{# Ministries #}
 	{% set ministries = entry.card.all() %}
-	<section class="mt-20 mb-48">
+	<section class="mt-20 mb-40">
 		<h2 class="container font-extrabold text-64 text-gray-dark mb-16">{{entry.heading}}</h2>
-		<div class="max-w-[1440px] mx-auto">
-			<splide aria-labelledby="Our Ministries" :has-track="false" :options="{ perPage: 3, perMove: 1, gap: 12, keyboard: 'global'}">
+		<div class="container">
+			<splide aria-labelledby="Our Ministries" :has-track="false" :options="{ perPage: 3, perMove: 1, gap: 12, focus: 'center', keyboard: 'global', classes: { pagination: 'splide__pagination space-x-4 my-12' }}">
 				<splide-track>
 					{% for ministry in ministries %}
 						{% set ministryImage = ministry.image.one() ?? null %}
-						<splide-slide class="group h-[500px] w-[500px] min-w-[500px] rounded-2xl relative overflow-hidden">
+						<splide-slide class="group rounded-2xl relative overflow-hidden">
 							{% if ministryImage %}
 								<picture>
 									{% if craft.app.images.supportsWebP %}
@@ -79,14 +79,14 @@
 					{% endfor %}
 				</splide-track>
 
-				<div class="splide__arrows">
-					<button type="button" aria-label="Previous Slide" class="splide__arrow splide__arrow--prev">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="5" stroke="currentColor" class="w-6 h-6">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+				<div class="splide__arrows relative -bottom-10">
+					<button type="button" aria-label="Previous Slide" class="splide__arrow splide__arrow--prev absolute left-[30%] -translate-x-[30%]hover:text-neutral-800 transition">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-9 h-9">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
 						</svg>
 					</button>
-					<button type="button" aria-label="Next Slide" class="splide__arrow splide__arrow--next">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="5" stroke="currentColor" class="w-6 h-6">
+					<button type="button" aria-label="Next Slide" class="splide__arrow splide__arrow--next absolute right-[30%] translate-x-[30%] hover:text-neutral-800 transition">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-9 h-9">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
 						</svg>
 					</button>

@@ -15,6 +15,17 @@ module.exports = {
       },
     },
     extend: {
+      animation: {
+        scroll: "scroll 6s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          // "0%": { transform: "translateX(0%)" },
+          // "100%": { transform: "translateX(-100%)" },
+          "0%": { marginLeft: "0px" },
+          "100%": { marginLeft: "-1200px" },
+        },
+      },
       fontFamily: {
         sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
       },
