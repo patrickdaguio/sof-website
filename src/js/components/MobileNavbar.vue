@@ -30,7 +30,7 @@ const navBarLinks: Link[] = [{
   link: '/https://www.facebook.com/shieldofaith'
 }, {
   title: 'Plan a Visit',
-  link: '/contact'
+  link: '/visit-us'
 }]
 
 function openNavbar() {
