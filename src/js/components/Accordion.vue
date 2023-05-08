@@ -19,7 +19,7 @@ function toggleAccordion(): void {
   <div class="mb-10">
     <div class="pb-5 border-b border-gray-dark">
       <button type="button"
-        class="w-full font-extrabold text-gray-dark text-3xl flex items-center justify-between cursor-pointer"
+        class="w-full font-extrabold text-gray-dark text-3xl flex items-center justify-between cursor-pointer text-left"
         @click="toggleAccordion">
         <slot name="question"></slot>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor"

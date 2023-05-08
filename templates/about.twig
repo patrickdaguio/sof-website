@@ -18,7 +18,7 @@
 
 	{# Pastors #}
 	{% set cardAndContentBlocks = entry.cardAndContent.all() %}
-	<section class="my-20 space-y-20 container">
+	<section class="my-20 space-y-20 container" id="pastors">
 		{% for block in cardAndContentBlocks %}
 			{% set cardImage = block.image.one() ?? null %}
 			<div class="flex gap-10 overflow-x-hidden">
@@ -46,7 +46,7 @@
 	</section>
 
 	{# Statement of Faith #}
-	<section class="container">
+	<section class="container" id="beliefs">
 		<h2 class="text-4xl py-24 md:py-48 leading-[48px] text-gray-dark text-center">
 			<span class="font-extrabold">"</span>
 			{{entry.statement}}<span class="font-extrabold">"</span>
@@ -55,7 +55,7 @@
 
 	{# Ministries #}
 	{% set ministries = entry.card.all() %}
-	<section class="mt-20 mb-40">
+	<section class="mt-20 mb-40" id="ministries">
 		<h2 class="container font-extrabold text-64 text-gray-dark mb-16">{{entry.heading}}</h2>
 		<div class="container">
 			<splide aria-labelledby="Our Ministries" :has-track="false" :options="{ perPage: 3, perMove: 1, gap: 12, focus: 'center', keyboard: 'global', classes: { pagination: 'splide__pagination space-x-4 my-12' }}">

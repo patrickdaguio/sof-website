@@ -15,16 +15,8 @@ module.exports = {
       },
     },
     extend: {
-      animation: {
-        scroll: "scroll 6s linear infinite",
-      },
-      keyframes: {
-        scroll: {
-          // "0%": { transform: "translateX(0%)" },
-          // "100%": { transform: "translateX(-100%)" },
-          "0%": { marginLeft: "0px" },
-          "100%": { marginLeft: "-1200px" },
-        },
+      screens: {
+        xs: "450px",
       },
       fontFamily: {
         sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
@@ -41,6 +33,7 @@ module.exports = {
       },
       colors: {
         gray: {
+          medium: "#4F4F4F",
           dark: "#202020",
           darkest: "#121212",
         },

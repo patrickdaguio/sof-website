@@ -1,1 +1,48 @@
-hello world
+{% extends "_layouts/base" %}
+
+{% set events = craft.entries.section('events').with('image').all() %}
+
+{% block main %}
+	<section class="relative h-[calc(100vh-6rem)]">
+		<div class="container h-full flex items-center">
+			<div class="-mt-32 text-gray-dark">
+				<p class="sm:text-lg lg:text-xl text-base uppercase font-extrabold mb-2">What's happening at Shield of Faith &gt; &gt; &gt;</p>
+				<h1 class="font-extrabold text-5xl lg:text-7xl">{{entry.title}}</h1>
+			</div>
+			{% include "_components/visit-us" only %}
+		</div>
+	</section>
+
+	{# Events #}
+	<section class="container text-zinc-900 mt-24 mb-36 space-y-28">
+		{% if events is not null and events|length %}
+			{% for event in events %}
+				{% set eventImage = event.image.one() ?? null %}
+				{% set eventDate = event.date %}
+				<div class="flex items-center gap-16">
+					<div class="overflow-hidden rounded-2xl w-1/2 min-h-full">
+						{% if eventImage %}
+							<picture>
+								{% if craft.app.images.supportsWebP %}
+									<source type="image/webp" srcset="{{ eventImage.url({ width: 2000, format: 'webp' }) }} 2000w">
+								{% endif %}
+								<img src="{{ eventImage.url({ width: 2000, height: 500 }) }}" srcset="{{ eventImage.url({ width: 2000}) }} 2000w" alt="{{ eventImage.title }}" class="block object-cover h-full w-full">
+							</picture>
+						{% else %}
+							<img src="{{ eventImage.url }}" alt="{{ eventImage.title }}" class="border border-red-500 p-2">
+						{% endif %}
+					</div>
+					<div class="flex items-center justify-center w-1/2">
+						<div>
+							<time class="text-2xl font-medium text-gray-medium tracking-tighter mb-1 block" datetime="{{event.date|date("Y-m-d")}}">{{eventDate|date('jS')}}
+								of
+								{{eventDate|date('F')}}</time>
+							<h2 class="text-4xl font-extrabold tracking-tighter mb-6">{{event.title}}</h2>
+							<p>{{event.richContent|striptags|truncate(200, '...')|default('Shield of Faith Event')}}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</section>
+{% endblock %}

@@ -34,7 +34,7 @@
 		{% set videoBlocks = entry.videoAndContent.all() %}
 		<div>
 			{% for block in videoBlocks %}
-				<div class="mb-36">
+				<div class="mb-36" id="{{block.heading|lower|replace({' ': '-'})}}">
 					<h2 class="text-6xl font-extrabold mb-10 tracking-tighter max-w-2xl">{{block.heading}}</h2>
 					<p class="text-lg mb-16">{{block.text}}</p>
 					{% set video = craft.embeddedAssets.get(block.video.one()) %}
