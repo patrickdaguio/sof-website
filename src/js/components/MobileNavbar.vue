@@ -56,7 +56,7 @@ function openNavbar() {
 
   <Transition name="fade" mode="out-in">
     <div v-if="navOpen"
-      class="outer md:hidden block absolute h-[calc(100vh-112px)] top-28 left-0 bg-white w-full container z-50">
+      class="outer md:hidden block absolute h-[calc(100vh-96px)] top-24 left-0 bg-white w-full container z-50">
       <nav class="mt-10 text-zinc-900">
         <TransitionGroup appear name="list" tag="ul" class="space-y-8">
           <template v-if="showListItems">

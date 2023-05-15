@@ -1,15 +1,18 @@
 {% extends "_layouts/base" %}
-
-{% set headingAndTextBlock = entry.headingAndText.one() %}
-
+{% set headingAndTextBlock =
+entry.headingAndText.one() %}
 {% block main %}
 	<section
 		class="relative h-[calc(100vh-6rem)]">
 		{# Mission #}
 		<div class="container h-full flex items-center">
 			<div class="-mt-12">
-				<h1 class="font-extrabold text-5xl lg:text-7xl text-gray-dark">{{headingAndTextBlock.heading}}</h1>
-				<p class="mt-10 text-base sm:text-lg lg:text-xl">{{headingAndTextBlock.text|nl2br}}</p>
+				<h1 class="font-extrabold text-5xl lg:text-7xl text-gray-dark">
+					{{ headingAndTextBlock.heading }}
+				</h1>
+				<p class="mt-10 text-base sm:text-lg lg:text-xl">
+					{{ headingAndTextBlock.text | nl2br }}
+				</p>
 			</div>
 			{# Visit Us #}
 			{% include "_components/visit-us" only %}
@@ -18,28 +21,30 @@
 
 	{# Pastors #}
 	{% set cardAndContentBlocks = entry.cardAndContent.all() %}
-	<section class="my-20 space-y-20 container" id="pastors">
+	<section class="md:my-20 mb-20 mt-32 space-y-14 md:space-y-20 container" id="pastors">
 		{% for block in cardAndContentBlocks %}
 			{% set cardImage = block.image.one() ?? null %}
-			<div class="flex gap-10 overflow-x-hidden">
-				<div class="z-2 rounded-2xl {% if loop.index is divisible by(2) %}order-2{% endif %}">
+			<div class="grid grid-rows-[max-content_1fr] sm:grid-cols-2 gap-x-5 md:gap-0 {% if loop.index is divisible by(2) %} md:grid-cols-[1fr_max-content] {% else %} md:grid-cols-[max-content_1fr] {% endif %}">
+				<div class="md:row-span-full {% if loop.index is divisible by(2) %} sm:col-start-2 {% endif %}">
 					{% if cardImage %}
 						<picture>
 							{% if craft.app.images.supportsWebP %}
-								<source type="image/webp" srcset="{{ cardImage.url({ width: 870, format: 'webp' }) }} 870w">
+								<source type="image/webp" srcset="{{ cardImage.url({ width: 870, format: 'webp' }) }} 870w"/>
 							{% endif %}
-							<img src="{{ cardImage.url({ width: 435, height: 400 }) }}" srcset="{{ cardImage.url({ width: 870 }) }} 870w" alt="{{ cardImage.title }}" class="block object-cover rounded-2xl max-h-[396px] h-[396px] max-w-[435px] w-[435px]">
+							<img src="{{ cardImage.url({ width: 435, height: 400 }) }}" srcset="{{ cardImage.url({ width: 870 }) }} 870w" alt="{{ cardImage.title }}" class="block object-cover rounded-2xl {% if loop.index is divisible by(2) %} md:rounded-tl-none{% else %}md:rounded-tr-none{% endif %} sm:max-h-full xs:max-h-[460px] max-h-80 md:max-w-[384px] md:w-96 min-h-full w-full max-w-full"/>
 						</picture>
 					{% else %}
-						<img src="{{ cardImage.url }}" alt="{{ cardImage.title }}" class="border border-red-500 p-2">
+						<img src="{{ cardImage.url }}" alt="{{ cardImage.title }}" class="border border-red-500 p-2"/>
 					{% endif %}
 				</div>
-				<div>
-					<div class="mb-5 relative z-1 pt-4 pb-5 text-white after:absolute after:bg-blue-900 after:top-0 after:w-[125%] after:h-full after:-z-1 after:rounded-2xl {% if loop.index is divisible by(2) %}after:left-0 pl-10{% else %}after:right-0{% endif %}">
-						<h2 class="text-3xl uppercase font-medium mb-1">{{block.heading}}</h2>
-						<h3 class="font-extrabold text-3xl">{{block.subheading}}</h3>
-					</div>
-					<p class="leading-6 {% if loop.index is divisible by(2) %}pl-10{% else %} pr-10{% endif %}">{{block.text|nl2br}}</p>
+				<div class="row-start-1 sm:col-span-full md:col-auto md:row-auto mb-5 pt-4 pb-5 pl-10 relative  bg-blue-primary text-white rounded-2xl md:rounded-r-2xl {% if loop.index is divisible by(2) %}md:rounded-l-2xl md:rounded-r-none sm:left-auto left-[88px] {% else %}md:col-start-2 sm:left-auto right-7 sm:mr-0 mr-[60px] sm:right-auto md:rounded-l-none{% endif %}">
+					<h2 class="text-lg xs:text-xl md:text-3xl uppercase font-medium md:mb-1">{{ block.heading }}</h2>
+					<h3 class="font-extrabold text-xl xs:text-2xl md:text-3xl">{{ block.subheading }}</h3>
+				</div>
+				<div class="md:px-10 mt-3.5 md:mt-0 {% if loop.index is divisible by(2) %} sm:row-start-2 {% endif %}">
+					<p class="text-sm md:text-base leading-6">
+						{{ block.text|nl2br }}
+					</p>
 				</div>
 			</div>
 		{% endfor %}
@@ -47,49 +52,54 @@
 
 	{# Statement of Faith #}
 	<section class="container" id="beliefs">
-		<h2 class="text-4xl py-24 md:py-48 leading-[48px] text-gray-dark text-center">
+		<h2 class="text-2xl sm:text-3xl md:text-4xl py-20 md:py-48 sm:leading-10 md:leading-[48px] text-gray-dark text-center">
 			<span class="font-extrabold">"</span>
-			{{entry.statement}}<span class="font-extrabold">"</span>
+			{{ entry.statement }}<span class="font-extrabold">"</span>
 		</h2>
 	</section>
 
 	{# Ministries #}
 	{% set ministries = entry.card.all() %}
-	<section class="mt-20 mb-40" id="ministries">
-		<h2 class="container font-extrabold text-64 text-gray-dark mb-16">{{entry.heading}}</h2>
+	<section class="mt-20 mb-28 overflow-hidden" id="ministries">
+		<h2 class="container font-extrabold text-3xl xs:text-4xl md:text-6xl text-gray-dark mb-10 md:mb-16">
+			{{ entry.heading }}
+		</h2>
 		<div class="container">
-			<splide aria-labelledby="Our Ministries" :has-track="false" :options="{ perPage: 3, perMove: 1, gap: 12, focus: 'center', keyboard: 'global', classes: { pagination: 'splide__pagination space-x-4 my-12' }}">
+			<splide class="md:m-0 xs:-mx-32 -mx-40" aria-labelledby="Our Ministries" :has-track="false" :options="{ perPage: 3, perMove: 1, gap: 12, focus: 'center', keyboard: 'global', classes: { pagination: 'splide__pagination space-x-2.5 md:space-x-4 md:mb-12 md:mt-8 my-6' }, breakpoints: { 768: { start: 1 } } }">
 				<splide-track>
 					{% for ministry in ministries %}
-						{% set ministryImage = ministry.image.one() ?? null %}
+						{% set ministryImage =
+        ministry.image.one() ?? null %}
 						<splide-slide class="group rounded-2xl relative overflow-hidden">
 							{% if ministryImage %}
 								<picture>
 									{% if craft.app.images.supportsWebP %}
-										<source type="image/webp" srcset="{{ ministryImage.url({ width: 500, format: 'webp' }) }} 1000w">
+										<source type="image/webp" srcset="{{ ministryImage.url({ width: 500, format: 'webp' }) }} 1000w"/>
 									{% endif %}
-									<img src="{{ ministryImage.url({ width: 500, height: 500 }) }}" srcset="{{ ministryImage.url({ width: 500 }) }} 1000w" alt="{{ ministryImage.title }}" class="object-cover h-full w-full group-hover:scale-105 transition-transform">
+									<img src="{{ ministryImage.url({ width: 500, height: 500 }) }}" srcset="{{ ministryImage.url({ width: 500 }) }} 1000w" alt="{{ ministryImage.title }}" class="object-cover h-full w-full group-hover:scale-105 transition-transform"/>
 								</picture>
 							{% else %}
-								<img src="{{ ministryImage.url }}" alt="{{ ministryImage.title }}" class="border border-red-500 p-2">
+								<img src="{{ ministryImage.url }}" alt="{{ ministryImage.title }}" class="border border-red-500 p-2"/>
 							{% endif %}
-							<span class="text-white text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl z-2 font-bold">{{ministry.heading}}</span>
+							<span class="text-white text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl md:text-5xl z-2 font-bold">{{ ministry.heading }}</span>
 							<div class="bg-black/60 z-1 absolute top-0 left-0 w-full h-full group-hover:bg-black/30 transition-colors"></div>
 						</splide-slide>
 					{% endfor %}
 				</splide-track>
 
-				<div class="splide__arrows relative -bottom-10">
-					<button type="button" aria-label="Previous Slide" class="splide__arrow splide__arrow--prev absolute left-[30%] -translate-x-[30%]hover:text-neutral-800 transition">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-9 h-9">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
-						</svg>
-					</button>
-					<button type="button" aria-label="Next Slide" class="splide__arrow splide__arrow--next absolute right-[30%] translate-x-[30%] hover:text-neutral-800 transition">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-9 h-9">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-						</svg>
-					</button>
+				<div class="splide__arrows relative w-full text-center">
+					<div class="z-2 relative inline-block">
+						<button type="button" aria-label="Previous Slide" class="splide__arrow splide__arrow--prev absolute top-[22px] md:top-[30px] md:right-[calc(100%_+_172px)] right-[calc(100%_+_124px)] hover:text-neutral-800 transition">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="md:w-9 md:h-9 h-8 w-8">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+							</svg>
+						</button>
+						<button type="button" aria-label="Next Slide" class="splide__arrow splide__arrow--next absolute top-[22px] md:top-[30px] md:left-[calc(100%_+_172px)] left-[calc(100%_+_124px)] hover:text-neutral-800 transition">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="4" stroke="currentColor" class="md:w-9 md:h-9 h-8 w-8">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</splide>
 		</div>

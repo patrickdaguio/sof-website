@@ -14,15 +14,17 @@ module.exports = {
         xl: "1104px",
       },
     },
+    screens: {
+      xs: "450px",
+      sm: "640px",
+      md: "768px",
+      lg: "936px",
+      xl: "1104px",
+      "2xl": "1280px",
+    },
     extend: {
-      screens: {
-        xs: "450px",
-      },
       fontFamily: {
         sans: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
-      },
-      fontSize: {
-        64: "64px",
       },
       zIndex: {
         1: 1,
