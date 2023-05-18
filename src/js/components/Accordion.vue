@@ -16,7 +16,7 @@ function toggleAccordion(): void {
 </script>
 
 <template>
-  <div class="md:mb-10 mb-5">
+  <div class="md:mb-10 mb-6">
     <div class="md:pb-5 pb-2.5 border-b border-gray-dark">
       <button type="button"
         class="w-full font-extrabold text-gray-dark text-xl md:text-3xl flex items-center justify-between cursor-pointer text-left"

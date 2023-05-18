@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 interface Link {
   title: string,
@@ -27,7 +27,10 @@ const navBarLinks: Link[] = [{
   link: '/connect'
 }, {
   title: 'Watch',
-  link: '/https://www.facebook.com/shieldofaith'
+  link: 'https://www.facebook.com/shieldofaith'
+}, {
+  title: 'Events',
+  link: '/events'
 }, {
   title: 'Plan a Visit',
   link: '/visit-us'
@@ -41,11 +44,13 @@ function openNavbar() {
 </script>
 
 <template>
-  <div class="flex justify-between md:hidden items-center h-24">
+  <div class="flex justify-between md:hidden items-center h-20">
     <button type="button" @click="openNavbar">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="w-7 h-7">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      <svg class="ham hamRotate ham4" :class="{ 'active': showListItems }" viewBox="0 0 100 100" width="46">
+        <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+        <path class="line middle" d="m 70,50 h -40" />
+        <path class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
       </svg>
     </button>
     <a class="" href="/">
@@ -56,12 +61,12 @@ function openNavbar() {
 
   <Transition name="fade" mode="out-in">
     <div v-if="navOpen"
-      class="outer md:hidden block absolute h-[calc(100vh-96px)] top-24 left-0 bg-white w-full container z-50">
-      <nav class="mt-10 text-zinc-900">
+      class="outer md:hidden block absolute h-[calc(100vh-5rem)] top-20 left-0 bg-white w-full container z-50">
+      <nav class="mt-12 text-zinc-900">
         <TransitionGroup appear name="list" tag="ul" class="space-y-8">
           <template v-if="showListItems">
 
-            <li class="text-4xl font-bold" :class="{ 'underline': isLinkActive(link.link) }" appear
+            <li class="text-3xl sm:text-4xl font-bold" :class="{ 'underline': isLinkActive(link.link) }" appear
               v-for="link, index in navBarLinks" :key="link.link" :style="{ transitionDelay: `${index * 50}ms` }"><a
                 :href="link.link">{{ link.title }}</a></li>
           </template>
@@ -95,5 +100,42 @@ function openNavbar() {
 .list-leave-to {
   opacity: 0;
   transform: translateX(-300px);
+}
+
+.ham {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 300ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
 }
 </style>

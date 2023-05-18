@@ -2,7 +2,7 @@
 
 {% block main %}
 	<section
-		class="relative h-[calc(100vh-6rem)]">
+		class="relative md:h-[calc(100vh-6rem)] h-[calc(100vh-5rem)]">
 		{# Mission #}
 		<div class="container h-full flex items-center">
 			<div class="-mt-12 text-gray-dark">
@@ -17,8 +17,8 @@
 	{# Times & Location #}
 	{% set timesAndLocationBlock = entry.timesAndLocations.one() %}
 	<section class="container md:mb-36 mb-20 text-gray-dark">
-		<h3 class="sm:text-2xl font-extrabold uppercase tracking-widest">Where to find us 	&gt; 	&gt; 	&gt;</h3>
-		<h2 class="text-4xl sm:text-6xl font-bold pb-8 sm:pb-14 pt-2.5 tracking-tighter">{{timesAndLocationBlock.heading}}</h2>
+		<h3 class="text-lg sm:text-2xl font-extrabold uppercase tracking-widest">Where to find us 	&gt; 	&gt; 	&gt;</h3>
+		<h2 class="text-4xl sm:text-6xl font-extrabold pb-8 sm:pb-14 pt-2.5 tracking-tighter">{{timesAndLocationBlock.heading}}</h2>
 		<div class="flex gap-8 md:gap-16 items-center flex-col sm:flex-row">
 			{% set locationImage = timesAndLocationBlock.image.one() ?? null %}
 			<div class="w-full sm:w-1/2 overflow-hidden min-h-full ">
