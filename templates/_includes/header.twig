@@ -1,31 +1,32 @@
 {% from "_macros/isLinkActive" import isLinkActive %}
 
-<header class="sticky top-0 left-0 z-50 bg-white">
-
-	<div
-		class="container">
-		{# Desktop #}
+<custom-header>
+	<template v-slot:content>
 		<div
-			class="justify-between items-center md:flex hidden h-24">
+			class="container">
+			{# Desktop #}
+			<div
+				class="justify-between items-center md:flex hidden">
 
-			{# Logo #}
-			<a href="/">
-				{{ svg('@webroot/static/logo.svg')|attr({class:['w-14']}) }}
-			</a>
+				{# Logo #}
+				<a href="/">
+					{{ svg('@webroot/static/logo.svg')|attr({class:['w-14']}) }}
+				</a>
 
-			{# Navbar #}
-			<nav class="navbar">
-				<ul>
-					<li><a href="/about"class="{{ isLinkActive('about')}}">About</a></li>
-					<li><a href="/connect"class="{{ isLinkActive('connect')}}">Connect</a></li>
-					<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
-					<li><a href="/events" class=" {{ isLinkActive('events')}}">Events</a></li>
-					<li><a href="/visit-us" class=" {{ isLinkActive('visit-us')}}">Visit Us</a></li>
-				</ul>
-			</nav>
+				{# Navbar #}
+				<nav class="navbar">
+					<ul>
+						<li><a href="/about"class="{{ isLinkActive('about')}}">About</a></li>
+						<li><a href="/connect"class="{{ isLinkActive('connect')}}">Connect</a></li>
+						<li><a href="https://www.facebook.com/shieldofaith">Watch</a></li>
+						<li><a href="/events" class=" {{ isLinkActive('events')}}">Events</a></li>
+						<li><a href="/visit-us" class=" {{ isLinkActive('visit-us')}}">Visit Us</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			{# Mobile #}
+			<mobile-navbar></mobile-navbar>
 		</div>
-
-		{# Mobile #}
-		<mobile-navbar></mobile-navbar>
-	</div>
-</header>
+	</template>
+</custom-header>

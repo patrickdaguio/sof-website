@@ -5,6 +5,7 @@
 {% set heroBlock = entry.hero.one() %}
 
 {% block main %}
+	{% cache %}
 	<section
 		class="relative md:h-[calc(100vh-6rem)] h-[calc(100vh-5rem)]">
 		{# Mission #}
@@ -115,4 +116,5 @@
 			</template>
 		</contact-form>
 	</section>
+	{% endcache %}
 {% endblock %}
